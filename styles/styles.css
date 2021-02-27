@@ -1,0 +1,102 @@
+/*Initializing CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea {
+  font-family: "Montserrat text", sans-serif;
+}
+
+body {
+  font-size: 16px;
+}
+
+i {
+  font-size: 12px;
+}
+
+.intro {
+  width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  max-width: 1900px;
+  background-image: url(../images/bg-desktop2.jpg);
+  background-position: center -20px;
+}
+
+.intro header {
+  width: auto;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f4f4f4;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+
+.intro header .company-name {
+  width: 300px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -200px;
+}
+
+.intro header .company-name .icon {
+  width: 60px;
+}
+
+.intro header .company-name .title {
+  font: 34px "Montserrat";
+  letter-spacing: 1.5px;
+}
+/*# sourceMappingURL=styles.css.map */

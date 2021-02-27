@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+.intro {
+  @include size(100%, 1000px);
+  margin: 0 auto;
+  max-width: 1900px;
+  background-image: url(../images/bg-desktop2.jpg);
+  background-position: center -20px;
+
+  header {
+    @include size(auto, 70px);
+    @include flexCenter(row, space-around, center);
+    color: $mainColor;
+    background-color: $bgHeader;
+
+    .company-name {
+      @include size(300px, 100%);
+      @include flexCenter(row, space-around, center);
+      //border: 2px solid red;
+      margin-left: -200px;
+      .icon {
+        width: 60px;
+      }
+      .title {
+        font: 34px "Montserrat";
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+}

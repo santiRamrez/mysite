@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+/*Initializing CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+}
+
+a {
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea {
+  font-family: "Montserrat text", sans-serif;
+}
+body {
+  font-size: 16px;
+}
+i {
+  font-size: 12px;
+}
+
+@import "./intro";
