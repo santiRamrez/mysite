@@ -8,7 +8,7 @@
   background-position: center -100px;
 
   header {
-    @include size(100%, 70px);
+    @include size(100%, 4.375em);
     color: $mainColor;
     background-color: $bgHeader;
     @include flexCenter(row, space-between, center);
@@ -21,25 +21,26 @@
       margin-left: 3vw;
 
       .icon {
-        width: 60px;
+        width: 3.75em;
       }
       .title {
-        font: 30px "Montserrat";
+        font: 1.875em "Montserrat";
         letter-spacing: 1.5px;
       }
     }
     nav {
       margin-right: 3vw;
+
       ul {
         //border: 2px solid red;
         width: 30vw;
-        max-width: 500px;
-        min-width: 400px;
+        max-width: 31.25em;
+        min-width: 25em;
         @include flexCenter(row, space-around, center);
 
         li {
           list-style: none;
-          font: 18px "Montserrat text";
+          font: 1.125em "Montserrat text";
           cursor: pointer;
           border-bottom: 1px solid transparent;
           transition: 0.2s all ease-in-out;
@@ -59,16 +60,18 @@
     @include flexCenter(row, center, center);
 
     .bg-text {
+      font-size: 16px;
       background-color: rgba(40, 40, 40, 0.9);
-      @include size(1000px, 120px);
+      @include size(62.5em, 8em);
       max-width: 1200px;
       color: $mainColor;
       @include flexCenter(column, center, space-around);
-      border-radius: 15px;
+      border-radius: 0.9375em;
+      transition: 0.2s all ease-in-out;
 
       .intro-message {
         margin-top: -10px;
-        font: 38px "Montserrat text";
+        font: 2.375em "Montserrat text";
         letter-spacing: 2px;
         text-align: center;
         width: 100%;
@@ -77,7 +80,8 @@
       .intro-caption {
         margin-top: 10px;
         text-align: right;
-        padding-right: 60px;
+        padding-right: 3.5em;
+        font: 1em "Montserrat text";
       }
     }
   }
@@ -86,23 +90,42 @@
 @media (max-width: 1000px) {
   .intro {
     header {
-      font-size: 16px;
+      font-size: 14px;
     }
     .tocenter {
       .bg-text {
-        font-size: 16px;
-        @include size(800px, 120px);
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 759px) {
+  .intro {
+    header {
+      font-size: 12px;
+      nav {
+        display: none;
+      }
+    }
+    .tocenter {
+      .bg-text {
+        margin-top: 100px;
+        font-size: 14px;
+        @include size(60vw, 55vh);
+        @include flexCenter(column, space-around, center);
+        padding: 10px 30px;
+
         .intro-message {
           margin-top: -10px;
-          font: 30px "Montserrat text";
           letter-spacing: 2px;
+          line-height: 60px;
+          text-align: center;
           width: 100%;
           //border: 1px solid red;
         }
         .intro-caption {
-          margin-top: 10px;
-          padding-right: 40px;
-          font: 15px "Montserrat text";
+          display: none;
         }
       }
     }
