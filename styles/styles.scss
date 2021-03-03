@@ -17,6 +17,11 @@
   font-family: "Montserrat text";
 }
 
+@font-face {
+  src: url(Montserrat/Montserrat-Medium.ttf);
+  font-family: "Montserrat medium";
+}
+
 a {
   text-decoration: none;
 }
@@ -41,3 +46,5 @@ i {
 }
 
 @import "./intro";
+@import "./presentation";
+@import "./services";
