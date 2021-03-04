@@ -1,0 +1,24 @@
+//Mobile Instruction:
+
+Images must be 
+img {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+Paragraph must be 
+p {
+  font: 1em "Montserrat text";
+  line-height: 2.1em;
+  width: 100%;
+}
+
+Titles must be
+h {
+  font: 1.5em "Montserrat";
+}
+
+Icons must be {
+  svg images.
+  30px x 30px
+}

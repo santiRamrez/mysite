@@ -1,0 +1,61 @@
+@import "./variables";
+
+.presentation {
+  @include size(100%, 48.875em);
+  margin: 0 auto;
+  max-width: 1900px;
+  @include flexCenter(row, space-around, center);
+  background-color: #fbfbfb;
+  font-size: 16px;
+  padding: 4em 1em 0 1em;
+
+  .text {
+    @include size(33.125em, 37em);
+    margin-left: 2em;
+    //border: 2px solid red;
+
+    p {
+      font: 1em "Montserrat text";
+      line-height: 2.1em;
+    }
+  }
+  .image1 {
+    margin-right: 2em;
+    img {
+      width: 31.25em;
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .presentation {
+    font-size: 12px;
+  }
+}
+@media (max-width: 850px) {
+  .presentation {
+    @include size(100%, auto);
+
+    .text {
+      margin: -20px auto 0 auto;
+    }
+    .image1 {
+      margin: -100px auto 0 auto;
+      padding: 0 1.3em;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .presentation {
+    .text {
+      height: auto;
+      @include flexCenter(column, center, space-around);
+    }
+    .image1 {
+      margin-top: 25px;
+      img {
+        width: 80vw;
+        margin: 0 auto;
+      }
+    }
+  }
+}

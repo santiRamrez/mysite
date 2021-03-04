@@ -1,0 +1,155 @@
+@import "./variables";
+
+.services {
+  background-color: #fbfbfb;
+  @include size(100%, 36.25em);
+  max-width: 1900px;
+  margin: 0 auto;
+  font-size: 16px;
+  padding-top: 1em;
+
+  .title-services {
+    font: 1.5em "Montserrat medium";
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .container-cards {
+    @include size(100%, 100%);
+    //border: 2px solid red;
+    @include flexCenter(row, space-around, center);
+    background-image: url(../images/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 200px;
+
+    .card {
+      @include size(260px, 345px);
+      background-color: #ffff;
+      border-radius: 20px;
+      cursor: pointer;
+      transform: scale(1);
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0.5px 4px 10px 5px rgba(255, 255, 255, 0.5);
+      }
+      &:active {
+        transform: scale(1.05);
+        box-shadow: 0.5px 4px 10px 5px rgba(255, 255, 255, 0.5);
+      }
+      #webdev {
+        @include size(100%, 145px);
+        border-radius: 20px 20px 0 0;
+        background-image: url(../images/webdev.png);
+      }
+      #soporte {
+        @extend #webdev;
+        background-image: url(../images/soporte.png);
+      }
+      #redes {
+        @extend #webdev;
+        background-image: url(../images/redes.png);
+      }
+      .text-card {
+        @include size(100%, auto);
+
+        h3 {
+          font: 18px "Montserrat";
+          margin-top: 20px;
+          padding-left: 20px;
+        }
+        .caption-card {
+          font: 12px "Montserrat text";
+          padding: 7px 20px 0 20px;
+          @include size(100%, 110px);
+          //border: 1px solid red;
+          line-height: 20px;
+        }
+        .info {
+          font: italic 12px "Montserrat text";
+          @include size(100%, auto);
+          margin-top: 10px;
+          padding-left: 20px;
+          //border: 1px solid red;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 820px) {
+  .services {
+    @include size(100%, 90.25em);
+    padding: 40px 0;
+
+    .title-services {
+      padding-top: 40px;
+    }
+
+    .container-cards {
+      @include size(100%, 100%);
+      margin: 0 auto;
+      padding-top: 25px;
+      @include flexCenter(column, space-around, center);
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .services {
+    .title-services {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .services {
+    padding-top: 30px;
+  }
+}
+.quotes {
+  @include size(100%, auto);
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: #003a4d;
+  @include flexCenter(column, space-around, center);
+  font-size: 16px;
+  padding: 50px 10px;
+
+  h3 {
+    @include size(80%, auto);
+    margin: 0 auto;
+    color: #fff;
+    font: italic 1.5em "Montserrat text";
+    text-align: center;
+    line-height: 32px;
+  }
+  p {
+    font: 0.95em "Montserrat text";
+    text-align: right;
+    @include size(50%, 20px);
+    margin: 10px auto 0 auto;
+    color: #f0f0f0;
+  }
+}
+@media (max-width: 820px) {
+  .quotes {
+    font-size: 14px;
+    @include size(100%, auto);
+    @include flexCenter(column, space-around, space-around);
+    padding: 70px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .quotes {
+    h3 {
+      font: italic 1em "Montserrat text";
+    }
+    p {
+      font: 0.7em "Montserrat text";
+    }
+  }
+}
