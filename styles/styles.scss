@@ -10,16 +10,19 @@
 @font-face {
   src: url(Montserrat/Montserrat-SemiBold.ttf);
   font-family: "Montserrat";
+  font-display: block;
 }
 
 @font-face {
   src: url(Montserrat/Montserrat-Regular.ttf);
   font-family: "Montserrat text";
+  font-display: block;
 }
 
 @font-face {
   src: url(Montserrat/Montserrat-Medium.ttf);
   font-family: "Montserrat medium";
+  font-display: block;
 }
 
 a {
@@ -45,6 +48,8 @@ i {
   font-size: 12px;
 }
 
+@import "./heading";
 @import "./intro";
 @import "./presentation";
 @import "./services";
+@import "./footer";

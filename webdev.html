@@ -42,7 +42,20 @@
       crossorigin="anonymous"
     />
     <link
+      rel="preload"
+      as="style"
+      href="styles/portfolio.css"
+      type="text/css"
+      crossorigin="anonymous"
+    />
+    <link
       href="styles/styles.css?version=1.1"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      href="styles/portfolio.css"
       rel="stylesheet"
       type="text/css"
       media="screen"
@@ -54,11 +67,11 @@
       href="images/apple-touch-icon-120x120.png"
     />
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
-    <title>Tecnolatam - Home</title>
+    <title>Desarrollo Web - Tecnolatam</title>
   </head>
 
   <body>
-    <section class="intro">
+    <section class="heading">
       <header>
         <div class="company-name">
           <h1 class="title">Tecnolatam</h1>
@@ -87,85 +100,10 @@
           </ul>
         </nav>
       </header>
-      <div class="tocenter">
-        <div class="bg-text">
-          <h2 class="intro-message">
-            La Revolución Digital Llegó para Quedarse
-          </h2>
-          <p class="intro-caption">...y queremos que no te quedes atrás!</p>
-        </div>
-      </div>
     </section>
-    <section class="presentation" id="presentation">
-      <div class="text">
-        <p>
-          En Tecnolatam sabemos que vivimos tiempos desafiantes, decisivos y muy
-          acelerados, por tanto hemos creado este espacio para compartir
-          conocimiento, informar sobre las novedades que suceden en el mundo de
-          la tecnología y ofrecer soluciones tecnológicas al alcance de todos.
-        </p>
-        <br />
-        <p>
-          Tenemos la misión de crear una red de profesionales que aporten al
-          desarrollo de nuestra región en todas las áreas IT y más. Creemos
-          profundamente en que es posible convertir a Latinoamérica en una
-          potencia tecnológica, pero es necesario de la colaboración de todos y
-          cada uno de nosotros para lograrlo.
-        </p>
-      </div>
-      <div class="image1">
-        <img src="images/girl.png" alt="tecnolatam" class="girl" />
-      </div>
-    </section>
-    <section class="services" id="services">
-      <h3 class="title-services">Tenemos las siguientes soluciones para ti:</h3>
-      <!--Service Cards-->
-      <div class="container-cards">
-        <!--Card1-->
-        <div class="card">
-          <div class="image-card" id="webdev"></div>
-          <div class="text-card">
-            <h3>Desarrollo Web</h3>
-            <p class="caption-card">
-              Sitio web personalizado, para que exhibas tus productos o servicos
-              al mundo, aumenta tus ventas, consigue más clientes, te ayudamos
-              en todo el proceso.
-            </p>
-            <p class="info"><a>Click para mayor información</a></p>
-          </div>
-        </div>
-        <!--Card2-->
-        <div class="card">
-          <div class="image-card" id="soporte"></div>
-          <div class="text-card">
-            <h3>Soporte Técnico</h3>
-            <p class="caption-card">
-              Evita los virus informáticos, obten tu correo electrónico
-              corporativo, actualiza Windows, configura impresoras, soluciona
-              cualquier problema con tu computador.
-            </p>
-            <p class="info"><a>Click para mayor información</a></p>
-          </div>
-        </div>
-        <!--Card3-->
-        <div class="card">
-          <div class="image-card" id="redes"></div>
-          <div class="text-card">
-            <h3>Conectividad y Redes</h3>
-            <p class="caption-card">
-              Mejora la cobertura celular de tu casa u oficina, instala una red
-              local con acceso a internet dónde quiera que estes.
-            </p>
-            <p class="info"><a>Click para mayor información</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="quotes">
-      <h3>"<span id="quote"></span>"</h3>
-      <p>-<span id="author"></span></p>
-    </section>
+    <!--Portfolio-->
 
+    <!--Footer-->
     <footer>
       <div class="info__footer">
         <img
@@ -190,6 +128,5 @@
       </div>
     </footer>
     <script src="js/menuMobile.js "></script>
-    <script src="js/quotes.js"></script>
   </body>
 </html>

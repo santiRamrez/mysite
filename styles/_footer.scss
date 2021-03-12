@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+footer {
+  @include size(100%, 200px);
+  max-width: $maxWidth;
+  color: #fff;
+  padding-top: 80px;
+  @include flexCenter(row, space-around, center);
+
+  .info__footer {
+    width: auto;
+    @include flexCenter(row, space-around, center);
+    text-align: center;
+
+    .icon__footer {
+      width: 40px;
+      padding-right: 7px;
+    }
+  }
+  .info__button {
+    @include size(100%, 100px);
+    @include flexCenter(row, center, center);
+    font-size: 12px;
+    span {
+      font-family: "Montserrat text";
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    font-size: 14px;
+    padding: 1em;
+    @include flexCenter(column, center, space-around);
+
+    .info__button {
+      margin-top: 50px;
+      @include size(100%, 20px);
+    }
+  }
+}

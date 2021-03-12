@@ -2,7 +2,7 @@
 
 .services {
   background-color: #fbfbfb;
-  @include size(100%, 36.25em);
+  @include size(100%, 45.25em);
   max-width: 1900px;
   margin: 0 auto;
   font-size: 16px;
@@ -23,55 +23,70 @@
     background-position: center 200px;
 
     .card {
-      @include size(260px, 345px);
+      font-size: 18px;
+      @include size(16.25em, 21.5625em);
       background-color: #ffff;
-      border-radius: 20px;
+      border-radius: 1.25em;
       cursor: pointer;
       transform: scale(1);
       transition: 0.2s all ease-in-out;
+
       &:hover {
         transform: scale(1.05);
-        box-shadow: 0.5px 4px 10px 5px rgba(255, 255, 255, 0.5);
+        box-shadow: 0.0313em 0.25em 0.625em 0.3125em rgba(255, 255, 255, 0.5);
       }
       &:active {
         transform: scale(1.05);
-        box-shadow: 0.5px 4px 10px 5px rgba(255, 255, 255, 0.5);
+        box-shadow: 0.0313em 0.25em 0.625em 0.3125em rgba(255, 255, 255, 0.5);
       }
       #webdev {
-        @include size(100%, 145px);
-        border-radius: 20px 20px 0 0;
-        background-image: url(../images/webdev.png);
+        @include size(100%, 9.0625em);
+        border-radius: 1.25em 1.25em 0 0;
+        background-image: url(../images/react-code.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
       }
       #soporte {
         @extend #webdev;
-        background-image: url(../images/soporte.png);
+        background-image: url(../images/helpdesk.jpg);
       }
       #redes {
         @extend #webdev;
-        background-image: url(../images/redes.png);
+        background-image: url(../images/router.jpg);
       }
       .text-card {
         @include size(100%, auto);
 
         h3 {
-          font: 18px "Montserrat";
-          margin-top: 20px;
-          padding-left: 20px;
+          font: 1.125em "Montserrat";
+          margin-top: 1.2em;
+          padding-left: 0.9em;
         }
         .caption-card {
-          font: 12px "Montserrat text";
-          padding: 7px 20px 0 20px;
-          @include size(100%, 110px);
+          font: 0.75em "Montserrat text";
+          padding: 1em 1.2em 0 1.2em;
+          @include size(100%, 6.875em);
           //border: 1px solid red;
-          line-height: 20px;
+          line-height: 1.25em;
         }
         .info {
-          font: italic 12px "Montserrat text";
+          font: italic 0.75em "Montserrat text";
           @include size(100%, auto);
-          margin-top: 10px;
-          padding-left: 20px;
+          margin-top: 2.8em;
+          padding-left: 1.25em;
           //border: 1px solid red;
         }
+      }
+    }
+  }
+}
+@media (max-width: 990px) {
+  .services {
+    .container-cards {
+      .card {
+        //Card are set as component, use font size to make the cards bigger or smaller
+        font-size: 16px;
       }
     }
   }
