@@ -9,7 +9,7 @@
   header {
     @include size(100%, 4.375em);
     color: $mainColor;
-    background-color: $bgHeader;
+    //background-color: $bgHeader;
     @include flexCenter(row, space-between, center);
     font-size: 16px;
     position: relative;
