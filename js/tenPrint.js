@@ -7,24 +7,32 @@ canvas.height = window.innerHeight;
 ctx.fillStyle = "#07334B";
 ctx.fillRect(0, 0, canvas.width, canvas.height); //render the canvas on screen
 
-let xBackslash = 0;
-let yBackslash = 0;
-let xSlash = 40;
-let ySlash = 0;
+function drawLine(startX, startY, endX, endY) {
+  ctx.strokeStyle = "#F4F4F4";
+  ctx.beginPath(); // Start a new path
+  ctx.moveTo(startX, startY); // Beginning of the line
+  ctx.lineTo(endX, endY); // Ending of the line
+  ctx.stroke(); // Render the path
+}
 
-function backslash() {
-  ctx.strokeStyle = "#F4F4F4";
-  ctx.beginPath(); // Start a new path
-  ctx.moveTo(0, 0); // Beginning of the line
-  ctx.lineTo(20, 20); // Ending of the line
-  ctx.stroke(); // Render the path
+let x = 0;
+let y = 0;
+let spacing = 20;
+
+function renderIt() {
+  let random = Math.random().toFixed(2);
+  if (random < 0.5) {
+    drawLine(x, y, x + spacing, y + spacing);
+  } else {
+    drawLine(x + spacing, y + 0, x + 0, y + spacing);
+  }
+  x += spacing;
+  if (x > canvas.width) {
+    x = 0;
+    y += spacing;
+  }
 }
-function slash() {
-  ctx.strokeStyle = "#F4F4F4";
-  ctx.beginPath(); // Start a new path
-  ctx.moveTo(40, 0); // Beginning of the line
-  ctx.lineTo(20, 20); // Ending of the line
-  ctx.stroke(); // Render the path
+
+while (y < canvas.height) {
+  renderIt();
 }
-backslash();
-slash();
