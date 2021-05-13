@@ -1,0 +1,65 @@
+@import "./variables";
+
+.developer {
+  font-size: 16px;
+  @include size(100%, 31.25em);
+  max-width: 1900px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #07334B;
+  @include flexCenter(column, space-around, space-around);
+  @include flexCenter(column, space-evenly, center);
+
+  h4 {
+    color: $mainColor;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 2em;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-weight: 300;
+  }
+  .my__card {
+     @include size(auto, 6.25em);
+     display: flex;
+
+    .photo {
+      @include size(6.25em, 6.25em);
+      border-radius: 50%;
+      background-image: url(../images/yo2.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .text__container {
+      margin-left: 0.4375em;
+      border-left: 0.125em solid $mainColor;
+      padding-left: 0.4375em;
+      @include size(12.5em, 100%);
+      @include flexCenter(column, space-around, left);
+      @include flexCenter(column, space-evenly, left);
+      color: $mainColor;
+
+      h3 {
+        font-weight: 300;
+      }
+      a {
+        color: $mainColor;
+        font-style: italic;
+        cursor: pointer;
+        width: 5em;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s all ease-out;
+        &:hover {
+          border-bottom: 1px solid $mainColor;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .developer {
+    font-size: 10px;
+  }
+}

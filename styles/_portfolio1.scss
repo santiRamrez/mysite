@@ -1,0 +1,58 @@
+@import "./variables";
+
+.intro__portfolio {
+  @include size(100%, 100vh);
+  margin: 0 auto;
+  max-width: 1900px;
+  max-height: 750px;
+  background-image: url(../images/world.jpg);
+  background-image: url(../images/world.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25vh;
+  z-index: 1;
+
+  .container__title {
+    @include size(60%, 400px);
+    max-width: 700px;
+    //border: 1px solid red;
+    color: #f4f4f4;
+    padding-left: 100px;
+
+    h1 {
+      font-size: 52px;
+      line-height: 60px;
+      width: 600px;
+      text-align: left;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    button {
+      font-size: 16px;
+      font-weight: 300;
+      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: $mainColor;
+      @include size(150px, 45px);
+      border: 1.5px solid $mainColor;
+      margin-top: 40px;
+      margin-right: 1em;
+      cursor: pointer;
+      border-radius: 0.2em;
+      transition: 0.2s all ease-out;
+      &:hover {
+        background-color: #07334b;
+      }
+    }
+  }
+  .container__svg {
+    @include size(39%, 400px);
+    max-width: 700px;
+    //border: 1px solid red;
+    color: #f4f4f4;
+  }
+}

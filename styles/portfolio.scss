@@ -1,0 +1,51 @@
+/*Initializing CSS*/
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Medium.ttf);
+  font-family: "Montserrat medium";
+  font-display: block;
+}
+
+a {
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea {
+  font-family: "Montserrat text", sans-serif;
+}
+body {
+  font-size: 16px;
+  background-color: #303030;
+}
+
+//@import "./scrollbar";
+@import "./portfolio1";
+@import "./portfolio2";
+@import "./footer";

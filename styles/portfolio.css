@@ -46,198 +46,87 @@ body {
   background-color: #303030;
 }
 
-.heading {
+.intro__portfolio {
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   margin: 0 auto;
   max-width: 1900px;
-  background-image: #303030;
-}
-
-.heading header {
-  width: 100%;
-  height: 4.375em;
-  color: #f4f4f4;
+  max-height: 750px;
+  background-image: url(../images/world.jpg);
+  background-image: url(../images/world.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 16px;
-  position: relative;
-}
-
-.heading header .company-name {
-  width: 17.5em;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 3vw;
-}
-
-.heading header .company-name .icon {
-  width: 3.75em;
-}
-
-.heading header .company-name .title {
-  font: 1.875em "Montserrat";
-  letter-spacing: 1.5px;
-}
-
-.heading header nav {
-  margin-right: 3vw;
-}
-
-.heading header nav .menu-mobile {
-  display: none;
-  position: absolute;
-  top: 13px;
-  right: 25px;
+  padding-top: 25vh;
   z-index: 1;
-  width: 30px;
+}
+
+.intro__portfolio .container__title {
+  width: 60%;
+  height: 400px;
+  max-width: 700px;
+  color: #f4f4f4;
+  padding-left: 100px;
+}
+
+.intro__portfolio .container__title h1 {
+  font-size: 52px;
+  line-height: 60px;
+  width: 600px;
+  text-align: left;
+}
+
+.intro__portfolio .container__title p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.intro__portfolio .container__title button {
+  font-size: 16px;
+  font-weight: 300;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f4f4f4;
+  width: 150px;
+  height: 45px;
+  border: 1.5px solid #f4f4f4;
+  margin-top: 40px;
+  margin-right: 1em;
   cursor: pointer;
+  border-radius: 0.2em;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
-.heading header nav .mobileNav {
-  display: none;
+.intro__portfolio .container__title button:hover {
+  background-color: #07334b;
 }
 
-.heading header nav .desktop {
-  width: 30vw;
-  max-width: 31.25em;
-  min-width: 25em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.heading header nav .desktop li {
-  list-style: none;
-  font: 1.125em "Montserrat text";
-  cursor: pointer;
-  border-bottom: 1px solid transparent;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-}
-
-.heading header nav .desktop li:hover {
-  border-bottom: 1px solid #f4f4f4;
-}
-
-.heading header nav .desktop li a {
+.intro__portfolio .container__svg {
+  width: 39%;
+  height: 400px;
+  max-width: 700px;
   color: #f4f4f4;
 }
 
-@media (max-width: 1000px) {
-  .heading header {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 759px) {
-  .heading header {
-    font-size: 12px;
-  }
-  .heading header .company-name {
-    margin-left: -20px;
-  }
-  .heading header .company-name .title {
-    letter-spacing: 0.7px;
-  }
-}
-
-@media (max-width: 600px) {
-  .heading {
-    width: 100%;
-    height: 700px;
-    margin: 0 auto;
-  }
-  .heading header nav .menu-mobile {
-    display: block;
-    -webkit-transition: 0.6s all ease-in-out;
-    transition: 0.6s all ease-in-out;
-  }
-  .heading header nav .menu-mobile:active {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-  }
-  .heading header nav .desktop {
-    display: none;
-  }
-  .heading header nav .mobileNav {
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    top: 53px;
-    right: 0;
-    width: 0;
-    height: 92vh;
-    color: #303030;
-    background-color: rgba(244, 244, 244, 0.9);
-    z-index: 2;
-    -webkit-transition: 0.6s all ease-in-out;
-    transition: 0.6s all ease-in-out;
-  }
-  .heading header nav .mobileNav:active {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-  }
-  .heading header nav .mobileNav #closeMobile .closeMobile {
-    width: 30px;
-    height: 30px;
-    margin-top: 30px;
-    margin-left: 30px;
-  }
-  .heading header nav .mobileNav li {
-    list-style: none;
-    font: 1.5em "Montserrat text";
-    margin: 16px 30px;
-    width: 80%;
-    border-bottom: 1px solid rgba(40, 40, 40, 0.8);
-  }
-  .heading header nav .mobileNav li a {
-    color: #303030;
-  }
+.container__projects {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 footer {
   width: 100%;
   height: 200px;
   max-width: 1900px;
-  margin: 0;
+  margin: 0 auto;
   color: #fff;
   background-color: #0a0a0a;
   padding-top: 80px;

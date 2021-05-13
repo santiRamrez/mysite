@@ -1,0 +1,9 @@
+@import "./variables";
+
+.container__projects {
+  @include size(100%, auto);
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
+}

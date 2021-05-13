@@ -1,0 +1,780 @@
+/*Initializing CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Medium.ttf);
+  font-family: "Montserrat medium";
+  font-display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea {
+  font-family: "Montserrat text", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background-color: #303030;
+}
+
+/*Just Heading and introduction to webdev.html*/
+.heading {
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  max-width: 1900px;
+  background-image: url(../images/world.jpg);
+  background-image: url(../images/world.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heading header {
+  width: 100%;
+  height: 4.375em;
+  color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  position: relative;
+}
+
+.heading header .company-name {
+  width: 17.5em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3vw;
+}
+
+.heading header .company-name .icon {
+  width: 3.75em;
+}
+
+.heading header .company-name .title {
+  font: 1.875em "Montserrat";
+  letter-spacing: 1.5px;
+}
+
+.heading header nav {
+  margin-right: 3vw;
+}
+
+.heading header nav .menu-mobile {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 25px;
+  z-index: 1;
+  width: 30px;
+  cursor: pointer;
+}
+
+.heading header nav .mobileNav {
+  display: none;
+}
+
+.heading header nav .desktop {
+  width: 30vw;
+  max-width: 31.25em;
+  min-width: 25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading header nav .desktop li {
+  list-style: none;
+  font: 1.125em "Montserrat text";
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.heading header nav .desktop li:hover {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.heading header nav .desktop li a {
+  color: #f4f4f4;
+}
+
+.heading .tocenter {
+  color: #f4f4f4;
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+  max-width: 1900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading .tocenter .bg-text {
+  width: 90%;
+  height: 80%;
+  max-height: 800px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  align-items: center;
+}
+
+.heading .tocenter .bg-text .intro-message {
+  font-family: "Montserrat medium";
+  font-size: 38px;
+  line-height: 1.57em;
+  padding: 0.84em;
+  padding-top: 0.63em;
+  text-align: center;
+}
+
+.heading .tocenter .bg-text .btn-intro {
+  padding: 50px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading .tocenter .bg-text .btn-intro .btn {
+  font-size: 16px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f4f4f4;
+  padding: 0.9375em 1.5em;
+  border: 1.5px solid #f4f4f4;
+  margin-right: 1em;
+  cursor: pointer;
+  border-radius: 0.625em;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.heading .tocenter .bg-text .btn-intro .btn:hover {
+  background-color: #07334b;
+}
+
+@media (max-width: 1000px) {
+  .heading header {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 759px) {
+  .heading header {
+    font-size: 12px;
+  }
+  .heading header .company-name {
+    margin-left: -20px;
+  }
+  .heading header .company-name .title {
+    letter-spacing: 0.7px;
+  }
+}
+
+@media (max-width: 680px) {
+  .heading .tocenter .bg-text .intro-message {
+    font-size: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .heading .tocenter .bg-text .btn-intro .btn {
+    margin-top: 16px;
+    font-size: 14px;
+    width: 205px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+  }
+  .heading header nav .menu-mobile {
+    display: block;
+    -webkit-transition: 0.6s all ease-in-out;
+    transition: 0.6s all ease-in-out;
+  }
+  .heading header nav .menu-mobile:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  .heading header nav .desktop {
+    display: none;
+  }
+  .heading header nav .mobileNav {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 53px;
+    right: 0;
+    width: 0;
+    height: 92vh;
+    color: #303030;
+    background-color: rgba(244, 244, 244, 0.9);
+    z-index: 2;
+    -webkit-transition: 0.6s all ease-in-out;
+    transition: 0.6s all ease-in-out;
+  }
+  .heading header nav .mobileNav:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  .heading header nav .mobileNav #closeMobile .closeMobile {
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  .heading header nav .mobileNav li {
+    list-style: none;
+    font: 1.5em "Montserrat text";
+    margin: 16px 30px;
+    width: 80%;
+    border-bottom: 1px solid rgba(40, 40, 40, 0.8);
+  }
+  .heading header nav .mobileNav li a {
+    color: #303030;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading .tocenter .bg-text {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .heading .tocenter .bg-text .intro-message {
+    font-size: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px;
+    line-height: 50px;
+  }
+  .heading .tocenter .bg-text .btn-intro .btn {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 14px;
+    width: 205px;
+  }
+}
+
+.advertising {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  max-width: 1900px;
+  max-height: auto;
+  background-color: #07334B;
+  margin: 0 auto;
+}
+
+.advertising .container1, .advertising .container2 {
+  width: 100%;
+  height: 300px;
+  max-height: auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.advertising .container1 .card__ads, .advertising .container2 .card__ads {
+  width: 300px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 16px;
+  padding-top: 30px;
+  color: #f4f4f4;
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+}
+
+.advertising .container1 .card__ads:hover, .advertising .container2 .card__ads:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.advertising .container1 .card__ads .icon__ads, .advertising .container2 .card__ads .icon__ads {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  margin: auto;
+}
+
+.advertising .container1 .card__ads .text__ads, .advertising .container2 .card__ads .text__ads {
+  margin-top: 10px;
+}
+
+.advertising .container1 .card__ads .text__ads p, .advertising .container2 .card__ads .text__ads p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.advertising .container2 {
+  width: 100%;
+  height: 300px;
+  max-width: 1000px;
+  max-height: auto;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 680px) {
+  .advertising {
+    height: auto;
+  }
+  .advertising .container1, .advertising .container2 {
+    width: 100%;
+    height: 100%;
+  }
+  .advertising .container2 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pricing {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
+  padding: 68px 16px 100px 16px;
+  margin: 0 auto;
+  background-color: #07212F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.pricing .plans {
+  font-size: 18px;
+  width: 18.75em;
+  height: auto;
+  border: 1px solid #f4f4f4;
+  padding: 1em;
+  background-color: transparent;
+  color: #f4f4f4;
+  border-radius: 0.9375em;
+  margin-right: 1em;
+  margin-top: 2em;
+}
+
+.pricing .plans h3 {
+  font-size: 1.75em;
+}
+
+.pricing .plans .caption {
+  font-size: 0.875em;
+}
+
+.pricing .plans .prices {
+  padding: 0.625em 0;
+  font-size: 1.75em;
+}
+
+.pricing .plans .caption--price {
+  font-size: 0.75em;
+  color: #F0F0F0;
+}
+
+.pricing .plans .features, .pricing .plans .last-feature {
+  font-size: 0.875em;
+  font-family: 'Montserrat text';
+  font-weight: 300;
+  padding: 10px 0;
+  border-bottom: 1px solid #f4f4f4;
+  line-height: 20px;
+}
+
+.pricing .plans .last-feature {
+  border-bottom: none;
+}
+
+@media (max-width: 670px) {
+  .pricing .plans {
+    font-size: 14px;
+    margin-right: 0;
+  }
+}
+
+.developer {
+  font-size: 16px;
+  width: 100%;
+  height: 31.25em;
+  max-width: 1900px;
+  padding: 1em;
+  margin: 0 auto;
+  background-color: #07334B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.developer h4 {
+  color: #f4f4f4;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 2em;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+  font-weight: 300;
+}
+
+.developer .my__card {
+  width: auto;
+  height: 6.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.developer .my__card .photo {
+  width: 6.25em;
+  height: 6.25em;
+  border-radius: 50%;
+  background-image: url(../images/yo2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.developer .my__card .text__container {
+  margin-left: 0.4375em;
+  border-left: 0.125em solid #f4f4f4;
+  padding-left: 0.4375em;
+  width: 12.5em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  align-items: left;
+  color: #f4f4f4;
+}
+
+.developer .my__card .text__container h3 {
+  font-weight: 300;
+}
+
+.developer .my__card .text__container a {
+  color: #f4f4f4;
+  font-style: italic;
+  cursor: pointer;
+  width: 5em;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.developer .my__card .text__container a:hover {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+@media (max-width: 450px) {
+  .developer {
+    font-size: 10px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  max-width: 1900px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #0a0a0a;
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .info__footer {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+footer .info__footer .icon__footer {
+  width: 40px;
+  padding-right: 7px;
+}
+
+footer .info__button {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+footer .info__button span {
+  font-family: "Montserrat text";
+  padding: 5px;
+}
+
+@media (max-width: 640px) {
+  footer {
+    font-size: 14px;
+    padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+  }
+  footer .info__button {
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=webdev.css.map */

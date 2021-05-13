@@ -1,0 +1,58 @@
+@import "./variables";
+
+.pricing {
+  @include size(100%, auto);
+  max-width: 1900px;
+  padding: 68px 16px 100px 16px;
+  margin: 0 auto;
+  background-color: #07212F;
+  @include flexCenter(row, space-around, flex-start);
+
+  .plans {
+    font-size: 18px;
+    @include size(18.75em, auto);
+    border: 1px solid $mainColor;
+    padding: 1em;
+    background-color: transparent;
+    color: $mainColor;
+    border-radius: 0.9375em;
+    margin-right: 1em;
+    margin-top: 2em;
+
+    h3 {
+      font-size: 1.75em;
+    }
+    .caption {
+      font-size: 0.875em;
+    }
+    .prices {
+      padding: 0.625em 0;
+      font-size: 1.75em;
+    }
+    .caption--price {
+      font-size: 0.75em;
+      color: #F0F0F0;
+    }
+    .features {
+      font-size: 0.875em;
+      font-family: 'Montserrat text';
+      font-weight: 300;
+      padding: 10px 0;
+      border-bottom: 1px solid $mainColor;
+      line-height: 20px;
+    }
+    .last-feature {
+      @extend .features;
+      border-bottom: none;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .pricing {
+    .plans {
+      font-size: 14px;
+      margin-right: 0;
+    }
+  }
+}

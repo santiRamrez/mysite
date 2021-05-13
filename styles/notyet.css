@@ -1,0 +1,179 @@
+/*Initializing CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+  font-display: block;
+}
+
+@font-face {
+  src: url(Montserrat/Montserrat-Medium.ttf);
+  font-family: "Montserrat medium";
+  font-display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea {
+  font-family: "Montserrat text", sans-serif;
+}
+body {
+  font-size: 16px;
+  background-color: #303030;
+  color: #F4F4F4;
+}
+i {
+  font-size: 12px;
+}
+
+.container__title {
+  max-width: 1900px;
+  width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+  border-bottom: 2px solid #F4F4F4;
+}
+.container__title h1 {
+  text-align: center;
+}
+.container__title p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/******** Game Start **************/
+header {
+  width: 600px;
+  color: #FFF;
+  font-family: 'Merienda';
+  margin: 10px auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-around;
+}
+
+header h1 {
+  width: 150px;
+  font-size: 18px;
+}
+
+#result {
+  font-size: 26px;
+  padding: 10px;
+}
+
+header button {
+  padding: 0 20px;
+  font-family: 'Merienda';
+  font-size: 14px;
+  background-color: #FFF;
+  border: 2px solid #E0E0E0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+header button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+header button:hover {
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#193978), to(#0C1B38));
+  background-image: linear-gradient(to bottom right, #193978, #0C1B38);
+  color: #FFF;
+}
+
+.grid {
+  width: 500px;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px 100px;
+  -ms-grid-rows: 100px 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px 100px;
+  grid-gap: 20px;
+  background-image: radial-gradient(#E0E0E0, #4F4F4F);
+  margin: 5px auto;
+  padding: 20px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.grid .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.grid .card:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.grid .card:hover {
+  cursor: pointer;
+}
+
+.grid .card .front-face, .grid .card .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.grid .card .front-face {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.grid .card.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/***************Game End**************/

@@ -26,12 +26,12 @@
       display: block;
       font-size: 18px;
       @include size(16.25em, 21.5625em);
-      background-color: #ffff;
+      background-color: #fbfbfb;
       border-radius: 1.25em;
       cursor: pointer;
       transform: scale(1);
       transition: 0.2s all ease-in-out;
-
+      
       &:hover {
         transform: scale(1.05);
         box-shadow: 0.0313em 0.25em 0.625em 0.3125em rgba(255, 255, 255, 0.5);
@@ -65,20 +65,12 @@
           padding-left: 0.9em;
         }
         .caption-card {
-          font: 0.8em "Montserrat text";
+          font: 0.8em "Montserrat medium";
           font-weight: 500;
           padding: 1em 1.2em 0 1.2em;
           @include size(100%, 6.875em);
           //border: 1px solid red;
           line-height: 1.25em;
-        }
-        .info {
-          font: italic 0.75em "Montserrat text";
-          @include size(100%, auto);
-          margin-top: 2.4em;
-          padding-left: 1.25em;
-          color: #303030;
-          //border: 1px solid red;
         }
       }
     }

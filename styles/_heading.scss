@@ -1,10 +1,14 @@
-@import "./variables.scss";
+/*Just Heading and introduction to webdev.html*/
+@import "./variables";
 
 .heading {
-  @include size(100%, 1000px);
+  @include size(100%, 800px);
   margin: 0 auto;
   max-width: 1900px;
-  background-image: #303030;
+  background-image: url(../images/world.jpg);
+  background-image: url(../images/world.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   header {
     @include size(100%, 4.375em);
@@ -67,6 +71,57 @@
       }
     }
   }
+  .tocenter {
+    color: $mainColor;
+    @include size(100%, 90vh);
+    margin: 0 auto;
+    max-width: 1900px;
+    @include flexCenter(column, center, center);
+
+    .bg-text {
+      @include size(90%, 80%);
+      max-height: 800px;
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+      //border: 2px solid red;
+      border-radius: 10px;
+      text-align: center;
+      @include flexCenter(column, space-around, center);
+      @include flexCenter(column, space-evenly, center);
+
+      .intro-message {
+        font-family: "Montserrat medium";
+        font-size: 38px;
+        //border: 2px solid red;
+        line-height: 1.57em;
+        padding: 0.84em;
+        padding-top: 0.63em;
+        text-align: center;
+      }
+      .btn-intro {
+        padding: 50px;
+        padding-top: 20px;
+        //border: 2px solid $mainColor;
+        @include flexCenter(row, center, center);
+
+        .btn {
+          font-size: 16px;
+          background-color: transparent;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: $mainColor;
+          padding: 0.9375em 1.5em;
+          border: 1.5px solid $mainColor;
+          margin-right: 1em;
+          cursor: pointer;
+          border-radius: 0.625em;
+          transition: 0.2s all ease-out;
+          &:hover {
+            background-color: #07334b;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -85,6 +140,28 @@
         margin-left: -20px;
         .title {
           letter-spacing: 0.7px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .heading {
+    .tocenter {
+      .bg-text {
+        .intro-message {
+          font-size: 30px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .btn-intro {
+          //border: 1px solid red;
+          .btn {
+            margin-top: 16px;
+            font-size: 14px;
+            width: 205px;
+          }
         }
       }
     }
@@ -141,6 +218,35 @@
             a {
               color: #303030;
             }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .heading {
+    .tocenter {
+      .bg-text {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+
+        .intro-message {
+          font-size: 24px;
+          //border: 1px solid red;
+          @include flexCenter(column, space-evenly, center);
+          padding: 16px;
+          line-height: 50px;
+        }
+        .btn-intro {
+          //border: 1px solid red;
+          .btn {
+            margin: 0;
+            margin-top: 16px;
+            font-size: 14px;
+            width: 205px;
           }
         }
       }
