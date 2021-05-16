@@ -113,13 +113,42 @@ body {
   color: #f4f4f4;
 }
 
-.container__projects {
+.canvas {
   width: 100%;
   height: auto;
   max-width: 1900px;
   margin: 0 auto;
   background-color: transparent;
   overflow: hidden;
+}
+
+.container__projects {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: #07334b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__projects .timeline {
+  width: 5px;
+  height: 2000px;
+  background-color: #101010;
 }
 
 footer {

@@ -2,8 +2,10 @@ const canvas = document.getElementById("tenPrintCanvas");
 //ctx is an object
 //Using canvas api we`re going to work on the ctx "context" variable
 const ctx = canvas.getContext("2d");
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+
 ctx.fillStyle = "#07334B";
 ctx.fillRect(0, 0, canvas.width, canvas.height); //render the canvas on screen
 
@@ -17,9 +19,9 @@ function drawLine(startX, startY, endX, endY) {
 
 let x = 0;
 let y = 0;
-let spacing = 20;
+let spacing = 40;
 
-function renderIt() {
+let renderIt = () => {
   let random = Math.random().toFixed(2);
   if (random < 0.5) {
     drawLine(x, y, x + spacing, y + spacing);
@@ -31,8 +33,9 @@ function renderIt() {
     x = 0;
     y += spacing;
   }
-}
+};
 
-while (y < canvas.height) {
-  renderIt();
-}
+/*let execute = setInterval(renderIt, 100);
+if (y > canvas.height) {
+  clearInterval(execute);
+}*/

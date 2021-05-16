@@ -1,9 +1,21 @@
 @import "./variables";
 
-.container__projects {
+.canvas {
   @include size(100%, auto);
   max-width: 1900px;
   margin: 0 auto;
   background-color: transparent;
   overflow: hidden;
+}
+.container__projects {
+  @include size(100%, auto);
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: #07334b;
+  @include flexCenter(column, center, center);
+
+  .timeline {
+    @include size(5px, 2000px);
+    background-color: #101010;
+  }
 }
