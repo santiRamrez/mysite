@@ -60,20 +60,7 @@ class ProjectCard extends HTMLElement {
         <!--Card's Back-face-->
         <div class="card_face card_face-back">
           <p class="card_caption">
-            I needed one week to get done this project using
-            <strong>HTML, CSS and a little bit of JavaScript</strong>. And I
-            thought that I could make it better developing a
-            <strong>contact form</strong> so I watched a bunch of videos on
-            You-Tube and was able to create one
-            <strong>from zero using PHP.</strong><br />
-            I'm also proud of that logo made by myself
-            <strong>using FIGMA!</strong>
-            <em>
-              I copied the design from a png image and re-made the image againg
-              to use <strong>SVG format.</strong></em
-            ><br />
-            I did a research about loading web pages, performance and SEO to
-            make this project outstanding!
+            <slot></slot>
           </p>
         </div>
       </div>
