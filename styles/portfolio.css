@@ -28,6 +28,7 @@ a {
   text-decoration: none;
 }
 
+body,
 p,
 h1,
 h2,
@@ -113,21 +114,21 @@ body {
   color: #f4f4f4;
 }
 
-.canvas {
-  width: 100%;
-  height: auto;
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: transparent;
-  overflow: hidden;
-}
-
+/****Timeline y CANVAS ***********/
 .container__projects {
   width: 100%;
   height: auto;
   max-width: 1900px;
   margin: 0 auto;
   background-color: #07334b;
+  padding-top: 30px;
+}
+
+.container__projects .timeline {
+  width: 25px;
+  height: auto;
+  position: relative;
+  margin-left: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,15 +141,66 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  /*****Color to the timeline******/
 }
 
-.container__projects .timeline {
-  width: 5px;
-  height: 2000px;
-  background-color: #101010;
+.container__projects .timeline::after {
+  content: " ";
+  background-color: #f4f4f4;
+  position: absolute;
+  width: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container__projects .timeline project-card {
+  font-family: "Montserrat medium";
+  position: relative;
+  margin: 50px 0;
+  margin-left: 80px;
+  /* The circles on the timeline */
+}
+
+.container__projects .timeline project-card::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 100px;
+  left: -92px;
+  right: 0px;
+  background-color: #07334b;
+  border: 6px solid #f4f4f4;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container__projects .timeline .img-container {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: -40px;
+  left: -25px;
+  right: 0;
+  z-index: 0;
+}
+
+.container__projects .timeline .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 footer {

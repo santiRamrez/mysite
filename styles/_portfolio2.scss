@@ -1,21 +1,67 @@
 @import "./variables";
+/****Timeline y CANVAS ***********/
+.container__projects {
+  @include size(100%, auto);
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: #07334b;
+  padding-top: 30px;
 
+  .timeline {
+    @include size(25px, auto);
+    position: relative;
+    margin-left: 30%;
+    @include flexCenter(column, center, space-around);
+
+    /*****Color to the timeline******/
+    &::after {
+      content: " ";
+      background-color: #f4f4f4;
+      position: absolute;
+      width: 10px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    project-card {
+      font-family: "Montserrat medium";
+      position: relative;
+      margin: 50px 0;
+      margin-left: 80px;
+
+      /* The circles on the timeline */
+      &::after {
+        content: "";
+        position: absolute;
+        @include size(25px, 25px);
+        top: 100px;
+        left: -92px;
+        right: 0px;
+        background-color: #07334b;
+        border: 6px solid #f4f4f4;
+        border-radius: 50%;
+        z-index: 1;
+      }
+    }
+    .img-container {
+      @include size(60px, 60px);
+      position: absolute;
+      bottom: -40px;
+      left: -25px;
+      right: 0;
+      z-index: 0;
+
+      img {
+        @include size(100%, 100%);
+      }
+    }
+  }
+}
 .canvas {
   @include size(100%, auto);
   max-width: 1900px;
   margin: 0 auto;
   background-color: transparent;
   overflow: hidden;
-}
-.container__projects {
-  @include size(100%, auto);
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: #07334b;
-  @include flexCenter(column, center, center);
-
-  .timeline {
-    @include size(5px, 2000px);
-    background-color: #101010;
-  }
 }
