@@ -59,9 +59,11 @@ class ProjectCard extends HTMLElement {
         </div>
         <!--Card's Back-face-->
         <div class="card_face card_face-back">
-          <p class="card_caption">
-            <slot></slot>
-          </p>
+          <div class="card_caption">
+            <p><slot name="p1"></slot></p> 
+            <p><slot name="p2"></slot></p> 
+            <p><slot name="p3"></slot></p> 
+          </div>
         </div>
       </div>
     </section>
@@ -79,6 +81,7 @@ class ProjectCard extends HTMLElement {
       }
       .custom_element {
         font-size: 16px;
+        font-weight: 500;
         display: block;
         width: 28.125em;
         height: 21.875em;
@@ -185,6 +188,7 @@ class ProjectCard extends HTMLElement {
       .custom_element .card_inner .card_face-front .card_description .project_name {
         font-size: 1.375em;
         font-weight: 500;
+        color: #000;
         -webkit-transition: 0.2s all ease-in-out;
         transition: 0.2s all ease-in-out;
         cursor: pointer;
@@ -225,7 +229,6 @@ class ProjectCard extends HTMLElement {
 
       .custom_element .card_inner .card_face-front .card_description .flip_container .watch_project {
         font-size: 0.9em;
-        font-weight: 550;
         color: #000;
       }
 
@@ -250,11 +253,16 @@ class ProjectCard extends HTMLElement {
 
       .custom_element .card_inner .card_face-back .card_caption {
         width: 100%;
-        height: auto;
-        line-height: 1.5625em;
-        padding: 1.5625em 1.7em 0 1.7em;
-        font-size: 0.875em;
+        height: 100%;
+        line-height: 1.6em;
+        padding: 1.7em 1.7em 0 1.7em;
+        font-size: 0.9em;
+        font-weight: 500;
         cursor: pointer;
+        display: inline;
+      }
+       .custom_element .card_inner .card_face-back .card_caption p {
+        padding: 0.5em 1.7em 0 1.7em;
       }
     `;
   }
