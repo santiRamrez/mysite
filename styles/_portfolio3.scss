@@ -1,0 +1,36 @@
+@import "./variables";
+
+$time-signal-animation: 1.2s;
+
+#signal1 {
+  animation: signal $time-signal-animation linear 0s infinite;
+}
+#signal2 {
+  animation: signal $time-signal-animation linear 0.2s infinite;
+}
+#signal3 {
+  animation: signal $time-signal-animation linear 0.3s infinite;
+}
+@keyframes signal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #6c63ff;
+  }
+}
+
+#space-ship {
+  animation: rocket 5s ease-in 1;
+  z-index: 5;
+  transform-origin: center;
+}
+
+@keyframes rocket {
+  25% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -72,6 +72,7 @@ body {
 }
 
 .intro__portfolio .container__title {
+  display: block;
   font-size: 16px;
   margin-top: 25vh;
   width: 60%;
@@ -137,7 +138,7 @@ body {
 
 @media (max-width: 1140px) {
   .intro__portfolio .container_svg-animation svg {
-    display: none;
+    display: block;
   }
 }
 
@@ -338,6 +339,69 @@ body {
 }
 
 /*The below file are the animations of the main svg rocket*/
+#signal1 {
+  -webkit-animation: signal 1.2s linear 0s infinite;
+          animation: signal 1.2s linear 0s infinite;
+}
+
+#signal2 {
+  -webkit-animation: signal 1.2s linear 0.2s infinite;
+          animation: signal 1.2s linear 0.2s infinite;
+}
+
+#signal3 {
+  -webkit-animation: signal 1.2s linear 0.3s infinite;
+          animation: signal 1.2s linear 0.3s infinite;
+}
+
+@-webkit-keyframes signal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #6c63ff;
+  }
+}
+
+@keyframes signal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #6c63ff;
+  }
+}
+
+#space-ship {
+  -webkit-animation: rocket 5s ease-in 1;
+          animation: rocket 5s ease-in 1;
+  z-index: 5;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+@-webkit-keyframes rocket {
+  25% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes rocket {
+  25% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
 footer {
   width: 100%;
   height: 200px;
