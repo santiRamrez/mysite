@@ -127,6 +127,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  pointer-events: none;
 }
 
 .intro__portfolio .container_svg-animation svg {
@@ -135,11 +136,12 @@ body {
   top: 0;
   bottom: 0;
   z-index: 2;
+  pointer-events: none;
 }
 
 @media (max-width: 1140px) {
   .intro__portfolio .container_svg-animation svg {
-    display: block;
+    display: none;
   }
 }
 

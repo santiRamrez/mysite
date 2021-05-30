@@ -249,6 +249,7 @@ class ProjectCard extends HTMLElement {
         -webkit-transform: rotateY(180deg);
                 transform: rotateY(180deg);
         background-color: #fff;
+        cursor: pointer;
       }
 
       .custom_element .card_inner .card_face-back .card_caption {
@@ -258,7 +259,6 @@ class ProjectCard extends HTMLElement {
         padding: 1.7em 1.7em 0 1.7em;
         font-size: 0.9em;
         font-weight: 500;
-        cursor: pointer;
         display: inline;
       }
        .custom_element .card_inner .card_face-back .card_caption p {
@@ -289,7 +289,7 @@ class ProjectCard extends HTMLElement {
       this.flipCard();
     });
 
-    let backCard = this.shadowRoot.querySelector(".card_caption");
+    let backCard = this.shadowRoot.querySelector(".card_face-back");
     backCard.addEventListener("click", () => {
       this.removeFlipCard();
     });
