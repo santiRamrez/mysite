@@ -92,7 +92,7 @@ class ProjectCard extends HTMLElement {
       @media (max-width: 480px) {
         .custom_element {
           font-size: 13px;
-          width: 315px;
+          width: 300px;
         }
       }
 
@@ -108,8 +108,8 @@ class ProjectCard extends HTMLElement {
         border-radius: 1.25em;
         -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
-        -webkit-transition: all 1.5s ease;
-        transition: all 1.5s ease;
+        -webkit-transition: transform 1.5s ease;
+        transition: transform 1.5s ease;
       }
 
       .custom_element .card_inner .card_face {
