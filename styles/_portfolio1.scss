@@ -1,5 +1,5 @@
 @import "./variables";
-$padding-left-right: 120px;
+$padding-left-right: 8vw;
 
 .intro__portfolio {
   @include size(100%, 100vh);
@@ -66,8 +66,9 @@ $padding-left-right: 120px;
     svg {
       position: absolute;
       right: $padding-left-right;
-      top: 150px;
-      bottom: 100px;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
     }
   }
 }

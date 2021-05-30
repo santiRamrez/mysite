@@ -79,7 +79,7 @@ body {
   height: 400px;
   max-width: 700px;
   color: #f4f4f4;
-  padding-left: 120px;
+  padding-left: 8vw;
   z-index: 1;
 }
 
@@ -131,9 +131,10 @@ body {
 
 .intro__portfolio .container_svg-animation svg {
   position: absolute;
-  right: 120px;
-  top: 150px;
-  bottom: 100px;
+  right: 8vw;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 @media (max-width: 1140px) {
@@ -373,32 +374,40 @@ body {
 }
 
 #space-ship {
-  -webkit-animation: rocket 5s ease-in 1;
-          animation: rocket 5s ease-in 1;
+  -webkit-animation: rocket 30s ease-in;
+          animation: rocket 30s ease-in;
   z-index: 5;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes rocket {
-  25% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  75% {
+    -webkit-transform: rotateZ(280deg);
+            transform: rotateZ(280deg);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 
 @keyframes rocket {
-  25% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  75% {
+    -webkit-transform: rotateZ(280deg);
+            transform: rotateZ(280deg);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 

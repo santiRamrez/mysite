@@ -21,16 +21,19 @@ $time-signal-animation: 1.2s;
 }
 
 #space-ship {
-  animation: rocket 5s ease-in 1;
+  animation: rocket 30s ease-in;
   z-index: 5;
-  transform-origin: center;
+  transform-origin: 50% 50%;
 }
 
 @keyframes rocket {
-  25% {
-    transform: translateX(0%);
+  50% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: rotateZ(280deg);
   }
   100% {
-    transform: translateX(-100%);
+    transform: rotateZ(0deg);
   }
 }
