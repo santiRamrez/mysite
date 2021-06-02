@@ -4,8 +4,9 @@ https://www.youtube.com/watch?v=eMhiMsEC9Uk&list=PLLX1I3KXZ-YH-woTgiCfONMya39-Ty
 
 Thank you Marina!!
 */
+
 const cards = Array.from(document.querySelectorAll(".card"));
-const restart = document.getElementById("restart");
+const restart = document.querySelector(".restart");
 
 //control flow
 let hasFlipped = false;
@@ -67,6 +68,8 @@ function shuffle() {
     document.getElementById("result").textContent = matches;
   });
 }
-document.addEventListener("DOMContentLoaded", shuffle);
+
+/** Control Matching**/
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
+restart.addEventListener("click", shuffle);

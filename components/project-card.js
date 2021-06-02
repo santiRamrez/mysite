@@ -1,7 +1,7 @@
 class ProjectCard extends HTMLElement {
   //observer attributes goes first babe
   static get observedAttributes() {
-    return ["thename", "caption", "img", "bgimg"];
+    return ["thename", "caption", "img", "bgimg", "leadto"];
   }
   constructor() {
     super();
@@ -20,6 +20,9 @@ class ProjectCard extends HTMLElement {
     if (attr === "bgimg") {
       this.bgimg = newVal;
     }
+    if (attr === "leadto") {
+      this.leadto = newVal;
+    }
   }
   makeTemplate() {
     const template = document.createElement("template");
@@ -30,7 +33,7 @@ class ProjectCard extends HTMLElement {
         <!--Card's Front-face-->
         <div class="card_face card_face-front">
           <a
-            href="https://mejiasasociados.cl/"
+            href="${this.leadto}"
             target="_blank"
             class="img_container"
           >
@@ -42,7 +45,7 @@ class ProjectCard extends HTMLElement {
           </a>
           <div class="card_description">
             <a
-              href="https://mejiasasociados.cl/"
+              href="${this.leadto}"
               target="_blank"
               class="project_name"
               >${this.thename}</a
