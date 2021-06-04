@@ -14,6 +14,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 let matches = 0;
+let level = 1;
 
 function flipCard() {
   if (lockBoard) return;
@@ -41,10 +42,10 @@ function isMatch() {
   secondCard.removeEventListener("click", flipCard);
   resetBoard();
   matches += 1;
-  document.getElementById("result").textContent = matches;
 }
 
 function timerForNoMatches() {
+  console.log("timerForNoMatches()");
   lockBoard = true;
   setTimeout(() => {
     firstCard.classList.remove("flipped");
@@ -65,11 +66,10 @@ function shuffle() {
     card.classList.remove("flipped");
     card.style.order = randomOrder;
     matches = 0;
-    document.getElementById("result").textContent = matches;
   });
+  resetBoard();
+  cards.forEach((card) => card.addEventListener("click", flipCard));
 }
-
-/** Control Matching**/
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 restart.addEventListener("click", shuffle);

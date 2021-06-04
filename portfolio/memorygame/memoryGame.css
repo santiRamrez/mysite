@@ -157,9 +157,9 @@ header button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
-.first-container {
+.start-message,
+.lost-message {
   width: 700px;
   height: 500px;
   border-radius: 20px;
@@ -170,15 +170,18 @@ header button:hover {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 3;
 }
-.first-container h2 {
+.start-message h2,
+.lost-message h2 {
   text-align: center;
   font-family: "Architects Daughter", cursive;
   font-weight: 200;
   font-size: 38px;
   letter-spacing: 2px;
 }
-.first-container button {
+.start-message button,
+.lost-message button {
   padding: 10px 30px;
   font-size: 28px;
   border-radius: 10px;
@@ -188,6 +191,11 @@ header button:hover {
   color: white;
   transition: all 0.5s;
 }
-.first-container button:active {
+.start-message button:active,
+.lost-message button:active {
   transform: scale(0.95);
+}
+
+.try-again {
+  display: none;
 }

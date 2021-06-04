@@ -30,14 +30,14 @@
     <link
       rel="icon"
       type="image/png"
-      href="images/apple-touch-icon-120x120.png"
+      href=".../images/apple-touch-icon-120x120.png"
     />
-    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="icon" type="image/ico" href=".../images/favicon.ico" />
     <title>Memory Game JS - Tecnolatam</title>
   </head>
   <body>
     <header>
-      <h1>Matches: <span id="result"></span></h1>
+      <h1>Level :<span id="level"></span></h1>
       <div class="time">10:00</div>
       <button class="restart">Start Again</button>
     </header>
@@ -251,13 +251,22 @@
         />
       </div>
     </section>
-    <div class="pop-ups">
-      <div class="first-container">
+    <div class="pop-ups start-game">
+      <div class="start-message">
         <h2>Check this out gourgeus person!</h2>
         <button id="startBtn">Let's Go!</button>
       </div>
     </div>
-    <script src="memoryGame.js"></script>
-    <script src="timer.js"></script>
+
+    <div class="pop-ups try-again">
+      <div class="lost-message">
+        <h2>Too slow son!</h2>
+        <button id="tryAgainBtn">Try Again!</button>
+      </div>
+    </div>
+
+    <script src="js/memoryGame.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/levels.js"></script>
   </body>
 </html>

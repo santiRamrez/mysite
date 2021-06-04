@@ -2,6 +2,7 @@
 
 const popUp = document.querySelector(".pop-ups");
 const startBtn = document.getElementById("startBtn");
+const tryAgainBtn = document.getElementById("tryAgainBtn");
 
 function deletePopUp() {
   popUp.style.display = "none";
@@ -38,3 +39,4 @@ function startGame() {
 }
 
 startBtn.addEventListener("click", startGame);
+tryAgainBtn.addEventListener("click", startGame);
