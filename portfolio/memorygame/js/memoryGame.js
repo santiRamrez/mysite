@@ -7,6 +7,10 @@ Thank you Marina!!
 
 const cards = Array.from(document.querySelectorAll(".card"));
 const restart = document.querySelector(".restart");
+const showLevel = document.getElementById("level");
+
+let nextLevelMsg = document.querySelector(".next-level");
+let nextLevelBtn = document.getElementById("nextLevel");
 
 //control flow
 let hasFlipped = false;
@@ -15,6 +19,8 @@ let firstCard, secondCard;
 
 let matches = 0;
 let level = 1;
+
+showLevel.textContent = level;
 
 function flipCard() {
   if (lockBoard) return;
@@ -42,6 +48,16 @@ function isMatch() {
   secondCard.removeEventListener("click", flipCard);
   resetBoard();
   matches += 1;
+
+  /** Check for next level **/
+  let nextLevel = matches == 8;
+  if (nextLevel) {
+    nextLevelMsg.style.display = "flex";
+    clearInterval(runTimer);
+    timeFirstLevel -= 1.5;
+    timeInSeconds = timeFirstLevel * 60;
+    elTimer.textContent = "";
+  }
 }
 
 function timerForNoMatches() {
@@ -71,5 +87,23 @@ function shuffle() {
   cards.forEach((card) => card.addEventListener("click", flipCard));
 }
 
+function startGame() {
+  document.addEventListener("DOMContentLoaded", shuffle);
+}
+
+function goNextLevel() {
+  clearInterval(runTimer);
+  nextLevelMsg.style.display = "none";
+  level++;
+  showLevel.textContent = level;
+  shuffle();
+  setTimeout(() => {
+    runTimer = setInterval(startingTimer, 1000);
+  }, 500);
+}
+
+//startGame();
+
 cards.forEach((card) => card.addEventListener("click", flipCard));
 restart.addEventListener("click", shuffle);
+nextLevelBtn.addEventListener("click", goNextLevel);
