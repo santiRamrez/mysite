@@ -7,6 +7,7 @@ class ProjectCard extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
+
   attributeChangedCallback(attr, oldVal, newVal) {
     if (attr === "thename") {
       this.thename = newVal;
@@ -299,6 +300,8 @@ class ProjectCard extends HTMLElement {
   }
   disconectedCallback() {
     //use here removeEventListeners
+
+
   }
 }
 
