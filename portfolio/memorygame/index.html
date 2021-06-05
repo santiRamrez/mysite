@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="description" content="Memory game project" />
+    <meta
+      name="keywords"
+      content="Simple memory game made by Santiago Ramirez using Vanilla JS"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="memoryGame.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+    <!--Icon-->
+    <link
+      rel="icon"
+      type="image/png"
+      href=".../images/apple-touch-icon-120x120.png"
+    />
+    <link rel="icon" type="image/ico" href=".../images/favicon.ico" />
+    <title>Memory Game JS - Tecnolatam</title>
+  </head>
+  <body>
+    <header>
+      <h1>Level :<span id="level"></span></h1>
+      <div class="time"></div>
+      <button class="restart">Start Again</button>
+    </header>
+
+    <section class="grid">
+      <div class="card" data-checking="americanF">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/americanF.png"
+          alt="american football"
+        />
+      </div>
+
+      <div class="card" data-checking="baseball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/baseball.png"
+          alt="baseball"
+        />
+      </div>
+
+      <div class="card" data-checking="basketball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/basketball.png"
+          alt="basketball"
+        />
+      </div>
+
+      <div class="card" data-checking="bowling">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/bowling.png"
+          alt="bowling"
+        />
+      </div>
+
+      <div class="card" data-checking="pool">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/pool.png"
+          alt="pool"
+        />
+      </div>
+
+      <div class="card" data-checking="soccer">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/soccer.png"
+          alt="soccer"
+        />
+      </div>
+
+      <div class="card" data-checking="tennis">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/tennis.png"
+          alt="tennis"
+        />
+      </div>
+
+      <div class="card" data-checking="volleyball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/volleyball.png"
+          alt="volleyball"
+        />
+      </div>
+
+      <div class="card" data-checking="americanF">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/americanF.png"
+          alt="american football"
+        />
+      </div>
+
+      <div class="card" data-checking="baseball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/baseball.png"
+          alt="baseball"
+        />
+      </div>
+
+      <div class="card" data-checking="basketball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/basketball.png"
+          alt="basketball"
+        />
+      </div>
+
+      <div class="card" data-checking="bowling">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/bowling.png"
+          alt="bowling"
+        />
+      </div>
+
+      <div class="card" data-checking="pool">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/pool.png"
+          alt="pool"
+        />
+      </div>
+
+      <div class="card" data-checking="soccer">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/soccer.png"
+          alt="soccer"
+        />
+      </div>
+
+      <div class="card" data-checking="tennis">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/tennis.png"
+          alt="tennis"
+        />
+      </div>
+
+      <div class="card" data-checking="volleyball">
+        <img
+          class="back-face"
+          src="https://mejiasasociados.cl/Images/memogame/js.png"
+          alt="javascript"
+        />
+        <img
+          class="front-face"
+          src="https://mejiasasociados.cl/Images/memogame/volleyball.png"
+          alt="volleyball"
+        />
+      </div>
+    </section>
+    <div class="pop-ups start-game">
+      <div class="start-message">
+        <h2>Check this out gourgeus person!</h2>
+        <button id="startBtn">Let's Go!</button>
+      </div>
+    </div>
+
+    <div class="pop-ups try-again">
+      <div class="lost-message">
+        <h2>Too slow son!</h2>
+        <button id="tryAgainBtn">Try Again!</button>
+      </div>
+    </div>
+
+    <div class="pop-ups next-level">
+      <div class="message">
+        <h2>Let's go faster!</h2>
+        <button id="nextLevel">Next Level</button>
+      </div>
+    </div>
+
+    <script src="js/memoryGame.js"></script>
+    <script src="js/timer.js"></script>
+  </body>
+</html>

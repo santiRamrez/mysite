@@ -1,0 +1,213 @@
+/*Initializing CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background-color: #303030;
+  background-image: linear-gradient(-45deg, #0d324d, #7f5a83);
+  color: #f4f4f4;
+}
+i {
+  font-size: 12px;
+}
+
+/******** Game Start **************/
+header {
+  width: 600px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  margin: 10px auto;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-evenly;
+}
+
+header h1 {
+  width: 150px;
+  font-size: 24px;
+}
+
+header .time {
+  width: 150px;
+  height: auto;
+  font-size: 42px;
+}
+
+#result {
+  font-size: 26px;
+  padding: 10px;
+}
+
+header button {
+  width: 150px;
+  padding: 7px 0;
+  font-size: 14px;
+  color: #e0e0e0;
+  background-color: transparent;
+  border: 2px solid #e0e0e0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+header button:active {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+header button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #193978, #0c1b38);
+  color: #fff;
+}
+
+.grid {
+  width: 500px;
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px;
+  -ms-grid-rows: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-gap: 20px;
+  background-image: radial-gradient(#e0e0e0, #4f4f4f);
+  margin: 5px auto;
+  padding: 20px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.grid .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.grid .card:active {
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.grid .card:hover {
+  cursor: pointer;
+}
+
+.grid .card .front-face,
+.grid .card .back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid .card .front-face {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.grid .card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/***************Game End**************/
+
+/**************Pop Up ***************/
+.pop-ups {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message,
+.start-message,
+.lost-message {
+  width: 700px;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid #f4f4f4;
+  color: #f4f4f4;
+  background-image: linear-gradient(to right, #2a5470, #4c4177);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 3;
+}
+.message h2,
+.start-message h2,
+.lost-message h2 {
+  text-align: center;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 200;
+  font-size: 38px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 70%;
+}
+.message button,
+.start-message button,
+.lost-message button {
+  padding: 10px 30px;
+  font-size: 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #04b117, #006160);
+  border: 1px solid white;
+  color: white;
+  transition: all 0.5s;
+}
+.message button:active,
+.start-message button:active,
+.lost-message button:active {
+  transform: scale(0.95);
+}
+
+.try-again {
+  display: none;
+}
+.next-level {
+  display: none;
+}
+#level {
+  margin-left: 5px;
+}
