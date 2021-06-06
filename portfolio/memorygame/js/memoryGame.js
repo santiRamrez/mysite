@@ -12,6 +12,15 @@ const showLevel = document.getElementById("level");
 let nextLevelMsg = document.querySelector(".next-level");
 let nextLevelBtn = document.getElementById("nextLevel");
 
+let victoryMsg = document.querySelector(".victory");
+let victoryBtn = document.getElementById("haveWon");
+
+function youHaveWon() {
+  victoryMsg.style.display = "flex";
+  restartGame();
+  elTimer.textContent = "";
+}
+
 //control flow
 let hasFlipped = false;
 let lockBoard = false;
@@ -51,17 +60,25 @@ function isMatch() {
 
   /** Check for next level **/
   let nextLevel = matches == 8;
-  if (nextLevel) {
-    nextLevelMsg.style.display = "flex";
-    clearInterval(runTimer);
-    timeFirstLevel -= 1.5;
-    timeInSeconds = timeFirstLevel * 60;
-    elTimer.textContent = "";
+  let victory = nextLevel && level == 4;
+  if (nextLevel && level < 4) {
+    console.log("next level buddy");
+    setTimeout(showNextLevelMsg, 1000);
+  }
+  if (victory) {
+    setTimeout(youHaveWon, 2000);
   }
 }
 
+function showNextLevelMsg() {
+  nextLevelMsg.style.display = "flex";
+  clearInterval(runTimer);
+  timeFirstLevel -= 1;
+  timeInSeconds = timeFirstLevel * 60;
+  elTimer.textContent = "";
+}
+
 function timerForNoMatches() {
-  console.log("timerForNoMatches()");
   lockBoard = true;
   setTimeout(() => {
     firstCard.classList.remove("flipped");
@@ -87,10 +104,6 @@ function shuffle() {
   cards.forEach((card) => card.addEventListener("click", flipCard));
 }
 
-function startGame() {
-  document.addEventListener("DOMContentLoaded", shuffle);
-}
-
 function goNextLevel() {
   clearInterval(runTimer);
   nextLevelMsg.style.display = "none";
@@ -102,8 +115,24 @@ function goNextLevel() {
   }, 500);
 }
 
-//startGame();
+function restartGame() {
+  victoryMsg.style.display = "none";
+  resetBoard();
+  matches = 0;
+  level = 1;
+  showLevel.textContent = level;
+  shuffle();
+  deletePopUp();
+  clearInterval(runTimer);
+  timeFirstLevel = 4;
+  timeInSeconds = timeFirstLevel * 60;
+  runTimer = setInterval(startingTimer, 1000);
+  setTimeout(runTimer, 1000);
+}
+
+//document.addEventListener("DOMContentLoaded", shuffle);
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
-restart.addEventListener("click", shuffle);
+restart.addEventListener("click", restartGame);
+victoryBtn.addEventListener("click", restartGame);
 nextLevelBtn.addEventListener("click", goNextLevel);

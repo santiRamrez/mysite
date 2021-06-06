@@ -1,5 +1,3 @@
-/**Get rid of pop-up **/
-
 const popUp = document.querySelector(".pop-ups");
 const startBtn = document.getElementById("startBtn");
 const tryAgainBtn = document.getElementById("tryAgainBtn");
@@ -8,6 +6,7 @@ let tryAgainMsg = document.querySelector(".try-again");
 
 function deletePopUp() {
   popUp.style.display = "none";
+  tryAgainMsg.style.display = "none";
 }
 
 /** Start Timer **/
@@ -31,16 +30,25 @@ function startingTimer() {
   /** Stop timer **/
   if (timeInSeconds < 0) {
     clearInterval(runTimer);
-    tryAgainMsg.style.display = "flex";
+    setTimeout(stopGame, 1000);
   }
 }
 /** End Timer **/
 let runTimer;
 
 function startGame() {
+  //shuffle();
   deletePopUp();
   runTimer = setInterval(startingTimer, 1000);
 }
 
+function stopGame() {
+  tryAgainMsg.style.display = "flex";
+  timeFirstLevel = 4;
+  timeInSeconds = timeFirstLevel * 60;
+  level = 1;
+  restart.addEventListener("click", startGame);
+}
+
 startBtn.addEventListener("click", startGame);
-tryAgainBtn.addEventListener("click", startGame);
+tryAgainBtn.addEventListener("click", restartGame);

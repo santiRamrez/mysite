@@ -50,7 +50,7 @@ header h1 {
 
 header .time {
   width: 150px;
-  height: auto;
+  height: 50px;
   font-size: 42px;
 }
 
@@ -158,6 +158,7 @@ header button:hover {
   justify-content: center;
   align-items: center;
 }
+.victory-msg,
 .message,
 .start-message,
 .lost-message {
@@ -175,7 +176,8 @@ header button:hover {
 }
 .message h2,
 .start-message h2,
-.lost-message h2 {
+.lost-message h2,
+.victory-msg h2 {
   text-align: center;
   font-family: "Architects Daughter", cursive;
   font-weight: 200;
@@ -186,7 +188,8 @@ header button:hover {
 }
 .message button,
 .start-message button,
-.lost-message button {
+.lost-message button,
+.victory-msg button {
   padding: 10px 30px;
   font-size: 28px;
   border-radius: 10px;
@@ -198,10 +201,13 @@ header button:hover {
 }
 .message button:active,
 .start-message button:active,
-.lost-message button:active {
+.lost-message button:active,
+.victory-msg button:active {
   transform: scale(0.95);
 }
-
+.start-message {
+  display: flex;
+}
 .try-again {
   display: none;
 }
@@ -210,4 +216,12 @@ header button:hover {
 }
 #level {
   margin-left: 5px;
+}
+/****** Victory Message *****/
+.victory-msg h2 {
+  font-size: 48px;
+  width: auto;
+}
+.victory {
+  display: none;
 }
