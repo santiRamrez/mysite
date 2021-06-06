@@ -24,10 +24,16 @@
   font-display: block;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 a {
   text-decoration: none;
 }
 
+body,
 p,
 h1,
 h2,
@@ -43,9 +49,12 @@ textarea {
 
 body {
   font-size: 16px;
+  font-family: "Montserrat medium", sans-serif;
   background-color: #303030;
+  color: #000;
 }
 
+/*The below file are the styles of the first section*/
 .intro__portfolio {
   width: 100%;
   height: 100vh;
@@ -59,22 +68,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-top: 25vh;
-  z-index: 1;
+  position: relative;
 }
 
 .intro__portfolio .container__title {
+  display: block;
+  font-size: 16px;
+  margin-top: 25vh;
   width: 60%;
   height: 400px;
   max-width: 700px;
   color: #f4f4f4;
-  padding-left: 100px;
+  padding-left: 8vw;
+  z-index: 1;
 }
 
 .intro__portfolio .container__title h1 {
   font-size: 52px;
+  font-weight: 600;
   line-height: 60px;
   width: 600px;
   text-align: left;
@@ -106,28 +117,90 @@ body {
   background-color: #07334b;
 }
 
-.intro__portfolio .container__svg {
-  width: 39%;
-  height: 400px;
-  max-width: 700px;
-  color: #f4f4f4;
-}
-
-.canvas {
+.intro__portfolio .container_svg-animation {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 1900px;
-  margin: 0 auto;
-  background-color: transparent;
-  overflow: hidden;
+  max-height: 750px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
 }
 
+.intro__portfolio .container_svg-animation svg {
+  position: absolute;
+  right: 8vw;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 1140px) {
+  .intro__portfolio .container_svg-animation svg {
+    display: none;
+  }
+}
+
+@media (max-width: 725px) {
+  .intro__portfolio .container__title {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+  }
+  .intro__portfolio .container__title h1 {
+    font-size: 38px;
+    width: 80vw;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .intro__portfolio .container_svg-animation svg {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .intro__portfolio .container__title {
+    margin-top: 16vh;
+    padding: 16px;
+    text-align: center;
+  }
+  .intro__portfolio .container__title h1 {
+    font-size: 38px;
+    width: 100%;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .intro__portfolio .container__title p,
+  .intro__portfolio .container__title button {
+    margin-top: 7vh;
+  }
+  .intro__portfolio .container_svg-animation svg {
+    display: none;
+  }
+}
+
+/*The below file are the styles of the second section*/
+/****Timeline y CANVAS ***********/
 .container__projects {
   width: 100%;
   height: auto;
   max-width: 1900px;
   margin: 0 auto;
   background-color: #07334b;
+  padding-top: 30px;
+}
+
+.container__projects .timeline {
+  width: 25px;
+  height: auto;
+  position: relative;
+  margin-left: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,15 +213,204 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  /*****Color to the timeline******/
 }
 
-.container__projects .timeline {
-  width: 5px;
-  height: 2000px;
-  background-color: #101010;
+.container__projects .timeline::after {
+  content: " ";
+  background-color: #f4f4f4;
+  position: absolute;
+  width: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container__projects .timeline project-card {
+  font-family: "Montserrat medium";
+  position: relative;
+  margin: 50px 0;
+  margin-left: 80px;
+  /* The circles on the timeline */
+}
+
+.container__projects .timeline project-card::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 100px;
+  left: -92px;
+  right: 0px;
+  background-color: #07334b;
+  border: 6px solid #f4f4f4;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container__projects .timeline .img-container {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: -40px;
+  left: -25px;
+  right: 0;
+  z-index: 0;
+}
+
+.container__projects .timeline .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas {
+  width: 100%;
+  height: auto;
+  max-width: 1900px;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+@media (max-width: 940px) {
+  .container__projects {
+    padding: 30px 0;
+  }
+  .container__projects .timeline {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 606px) {
+  .container__projects {
+    padding: 16px;
+    padding-left: 20px;
+  }
+  .container__projects .timeline {
+    margin-left: 0;
+  }
+  .container__projects .timeline::after {
+    content: " ";
+    background-color: #f4f4f4;
+    position: absolute;
+    width: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .container__projects .timeline project-card {
+    font-family: "Montserrat medium";
+    position: relative;
+    margin: 50px 0;
+    margin-left: 40px;
+    /* The circles on the timeline */
+  }
+  .container__projects .timeline project-card::after {
+    content: "";
+    left: -52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container__projects {
+    padding: 16px 12px;
+  }
+  .container__projects .timeline {
+    width: 100%;
+    height: auto;
+  }
+  .container__projects .timeline::after {
+    display: none;
+  }
+  .container__projects .timeline project-card {
+    margin: 50px auto;
+    /* The circles on the timeline */
+  }
+  .container__projects .timeline project-card::after {
+    display: none;
+  }
+  .container__projects .timeline .img-container {
+    display: none;
+  }
+  .container__projects .timeline .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*The below file are the animations of the main svg rocket*/
+#signal1 {
+  -webkit-animation: signal 1.2s linear 0s infinite;
+          animation: signal 1.2s linear 0s infinite;
+}
+
+#signal2 {
+  -webkit-animation: signal 1.2s linear 0.2s infinite;
+          animation: signal 1.2s linear 0.2s infinite;
+}
+
+#signal3 {
+  -webkit-animation: signal 1.2s linear 0.3s infinite;
+          animation: signal 1.2s linear 0.3s infinite;
+}
+
+@-webkit-keyframes signal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #6c63ff;
+  }
+}
+
+@keyframes signal {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #6c63ff;
+  }
+}
+
+#space-ship {
+  -webkit-animation: rocket 30s ease-in;
+          animation: rocket 30s ease-in;
+  z-index: 5;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes rocket {
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  75% {
+    -webkit-transform: rotateZ(280deg);
+            transform: rotateZ(280deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes rocket {
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  75% {
+    -webkit-transform: rotateZ(280deg);
+            transform: rotateZ(280deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
 }
 
 footer {

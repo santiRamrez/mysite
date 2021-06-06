@@ -24,10 +24,16 @@
   font-family: "Montserrat medium";
   font-display: block;
 }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 a {
   text-decoration: none;
 }
+
+body,
 p,
 h1,
 h2,
@@ -42,10 +48,16 @@ textarea {
 }
 body {
   font-size: 16px;
+  font-family: "Montserrat medium", sans-serif;
   background-color: #303030;
+  color: #000;
 }
 
 //@import "./scrollbar";
+/*The below file are the styles of the first section*/
 @import "./portfolio1";
+/*The below file are the styles of the second section*/
 @import "./portfolio2";
+/*The below file are the animations of the main svg rocket*/
+@import "./portfolio3";
 @import "./footer";
