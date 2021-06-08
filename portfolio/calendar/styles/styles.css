@@ -110,17 +110,38 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 100px;
+}
+
+.container .container__calendar header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 60%;
   height: 100px;
 }
 
-.container .container__calendar header .arrows {
+.container .container__calendar header .header .arrows {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,31 +167,31 @@ body {
   transition: all 0.5s ease-out;
 }
 
-.container .container__calendar header .arrows:hover {
+.container .container__calendar header .header .arrows:hover {
   background-color: green;
 }
 
-.container .container__calendar header .arrows:active {
+.container .container__calendar header .header .arrows:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
 
-.container .container__calendar header .arrows img {
+.container .container__calendar header .header .arrows img {
   width: 40px;
   height: 40px;
 }
 
-.container .container__calendar header #back {
+.container .container__calendar header .header #back {
   margin-right: 20px;
   padding-right: 5px;
 }
 
-.container .container__calendar header #after {
+.container .container__calendar header .header #after {
   padding-left: 5px;
   margin-left: 20px;
 }
 
-.container .container__calendar header h1 {
+.container .container__calendar header .header h1 {
   width: 250px;
   height: 50px;
   display: -webkit-box;
@@ -189,9 +210,166 @@ body {
           align-items: center;
 }
 
-.container .container__calendar .date__container {
-  width: 100%;
-  height: 500px;
+.container .container__calendar header .select__container {
+  width: 40%;
+  height: 100px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container__calendar header .select__container select,
+.container .container__calendar header .select__container input {
+  width: 110px;
+  height: 30px;
+  color: #fff;
+  background-color: transparent;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.container .container__calendar header .select__container select,
+.container .container__calendar header .select__container optgroup,
+.container .container__calendar header .select__container option {
   border: 1px solid #fff;
+  font-size: 15px;
+}
+
+.container .container__calendar header .select__container input {
+  border: 1px solid #fff;
+  font-size: 15px;
+}
+
+.container .container__calendar header .select__container input:focus {
+  border: 1px solid transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .container__calendar header .select__container input:active {
+  border: 1px solid transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .container__calendar .container__name-days {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.container .container__calendar .container__name-days p {
+  width: 14%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container .container__calendar .date__container {
+  font-size: 14px;
+  width: 100%;
+  height: 30em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.container .container__calendar .date__container .dates__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 14%;
+  height: 3.125em;
+}
+
+.container .container__calendar .date__container .dates__box .dates {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.container .container__calendar .date__container .dates__box .padding_dates {
+  color: #777e90;
 }
 /*# sourceMappingURL=styles.css.map */

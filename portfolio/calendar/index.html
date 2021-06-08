@@ -23,21 +23,112 @@
         <div class="container__svg">
           <img src="./images/weather_app.svg" alt="ilustracion clima" />
         </div>
+        <div class="container__task-list">
+          <h2 class="today">
+            Today:<span id="todayStr">Friday, 15/04/2021</span>
+          </h2>
+          <p>Your tasks for today:</p>
+          <div class="container__task-list-dynamic">
+            <!--Web components-->
+            <!--It must have a title, caption and an icon if there is ready or not-->
+            <!--It must have a delete icon-->
+          </div>
+        </div>
       </div>
       <!--Calendar Container-->
       <div class="container__calendar">
         <!--Header Calendar-->
         <header>
-          <span id="back" class="arrows">
-            <img src="./images/angle-left-solid.svg" alt="back button" />
-          </span>
-          <h1><span id="month">December</span><span id="year">2021</span></h1>
-          <span id="after" class="arrows">
-            <img src="./images/angle-right-solid.svg" alt="after button" />
-          </span>
+          <!--Show month, year and buttons-->
+          <div class="header">
+            <span id="back" class="arrows">
+              <img src="./images/angle-left-solid.svg" alt="back button" />
+            </span>
+            <h1><span id="month">December</span><span id="year">2021</span></h1>
+            <span id="after" class="arrows">
+              <img src="./images/angle-right-solid.svg" alt="after button" />
+            </span>
+          </div>
+          <div class="select__container">
+            <select name="" id="selectMonth">
+              <optgroup label="Months">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </optgroup>
+            </select>
+            <input type="text" placeholder="Type a year" />
+          </div>
         </header>
+        <div class="container__name-days">
+          <p>SUN</p>
+          <p>MON</p>
+          <p>TUE</p>
+          <p>WED</p>
+          <p>THU</p>
+          <p>FRI</p>
+          <p>SAT</p>
+        </div>
         <!--Dates container-->
-        <div class="date__container"></div>
+        <div class="date__container">
+          <div class="dates__box"><span class="dates">01</span></div>
+          <div class="dates__box"><span class="dates">02</span></div>
+          <div class="dates__box"><span class="dates">03</span></div>
+          <div class="dates__box"><span class="dates">04</span></div>
+          <div class="dates__box"><span class="dates">05</span></div>
+          <div class="dates__box"><span class="dates">06</span></div>
+          <div class="dates__box"><span class="dates">07</span></div>
+          <div class="dates__box"><span class="dates">08</span></div>
+          <div class="dates__box"><span class="dates">09</span></div>
+          <div class="dates__box"><span class="dates">10</span></div>
+          <div class="dates__box"><span class="dates">11</span></div>
+          <div class="dates__box"><span class="dates">12</span></div>
+          <div class="dates__box"><span class="dates">13</span></div>
+          <div class="dates__box"><span class="dates">14</span></div>
+          <div class="dates__box"><span class="dates">15</span></div>
+          <div class="dates__box"><span class="dates">16</span></div>
+          <div class="dates__box"><span class="dates">17</span></div>
+          <div class="dates__box"><span class="dates">18</span></div>
+          <div class="dates__box"><span class="dates">19</span></div>
+          <div class="dates__box"><span class="dates">20</span></div>
+          <div class="dates__box"><span class="dates">21</span></div>
+          <div class="dates__box"><span class="dates">22</span></div>
+          <div class="dates__box"><span class="dates">23</span></div>
+          <div class="dates__box"><span class="dates">24</span></div>
+          <div class="dates__box"><span class="dates">25</span></div>
+          <div class="dates__box"><span class="dates">26</span></div>
+          <div class="dates__box"><span class="dates">27</span></div>
+          <div class="dates__box"><span class="dates">28</span></div>
+          <div class="dates__box"><span class="dates">29</span></div>
+          <div class="dates__box"><span class="dates">30</span></div>
+          <div class="dates__box"><span class="dates">31</span></div>
+          <div class="dates__box"><span class="dates">02</span></div>
+          <div class="dates__box"><span class="dates">01</span></div>
+          <div class="dates__box"><span class="dates">01</span></div>
+          <div class="dates__box"><span class="dates">01</span></div>
+          <div class="dates__box"><span class="dates">30</span></div>
+          <div class="dates__box"><span class="dates">31</span></div>
+          <div class="dates__box"><span class="dates">02</span></div>
+          <div class="dates__box"><span class="dates">01</span></div>
+          <div class="dates__box">
+            <span class="dates padding_dates">01</span>
+          </div>
+          <div class="dates__box">
+            <span class="dates padding_dates">01</span>
+          </div>
+          <div class="dates__box">
+            <span class="dates padding_dates">01</span>
+          </div>
+        </div>
       </div>
     </div>
   </body>
