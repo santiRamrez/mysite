@@ -1,0 +1,83 @@
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  @include size(100%, 100vh);
+  @include flexCenter(row, center, center);
+  background-image: radial-gradient(#303030, #4f4f4f);
+}
+
+.container {
+  @include size(1000px, 600px);
+  @include flexCenter(row, center, center);
+  color: #fdfdfd;
+
+  .container__task {
+    @include size(300px, 600px);
+    @include flexCenter(column, flex-start, center);
+    background-color: #606fee;
+
+    .container__svg {
+      @include size(200px, 200px);
+      @include flexCenter(column, center, center);
+
+      img {
+        @include size(100%, 100%);
+      }
+    }
+  }
+
+  .container__calendar {
+    @include size(700px, 600px);
+    background-color: #303658;
+
+    header {
+      @include flexCenter(row, center, center);
+      //border: 1px solid #fff;
+      @include size(100%, 100px);
+
+      .arrows {
+        @include flexCenter(row, center, center);
+        @include size(50px, 50px);
+        cursor: pointer;
+        border-radius: 50%;
+        transform: scale(1);
+        transition: all 0.5s ease-out;
+
+        &:hover {
+          background-color: green;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+        img {
+          @include size(40px, 40px);
+        }
+      }
+      #back {
+        margin-right: 20px;
+        padding-right: 5px;
+      }
+      #after {
+        padding-left: 5px;
+        margin-left: 20px;
+      }
+      h1 {
+        @include size(250px, 50px);
+        @include flexCenter(row, space-around, center);
+      }
+    }
+
+    .date__container {
+      @include size(100%, 500px);
+      border: 1px solid #fff;
+    }
+  }
+}

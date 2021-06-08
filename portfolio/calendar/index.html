@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="description" content="Calendario y app de tareas por hacer" />
+    <link
+      href="./styles/styles.css"
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+    />
+
+    <title>Calendar App</title>
+  </head>
+  <body>
+    <!--Global Container-->
+    <div class="container">
+      <!--Task Container-->
+      <div class="container__task">
+        <div class="container__svg">
+          <img src="./images/weather_app.svg" alt="ilustracion clima" />
+        </div>
+      </div>
+      <!--Calendar Container-->
+      <div class="container__calendar">
+        <!--Header Calendar-->
+        <header>
+          <span id="back" class="arrows">
+            <img src="./images/angle-left-solid.svg" alt="back button" />
+          </span>
+          <h1><span id="month">December</span><span id="year">2021</span></h1>
+          <span id="after" class="arrows">
+            <img src="./images/angle-right-solid.svg" alt="after button" />
+          </span>
+        </header>
+        <!--Dates container-->
+        <div class="date__container"></div>
+      </div>
+    </div>
+  </body>
+</html>
