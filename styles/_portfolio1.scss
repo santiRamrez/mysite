@@ -35,21 +35,27 @@ $padding-left-right: 8vw;
       margin-top: 10px;
       font-size: 18px;
     }
-    button {
-      font-size: 16px;
-      font-weight: 300;
-      background-color: transparent;
-      background-color: rgba(0, 0, 0, 0.6);
-      color: $mainColor;
-      @include size(150px, 45px);
-      border: 1.5px solid $mainColor;
-      margin-top: 40px;
-      margin-right: 1em;
-      cursor: pointer;
-      border-radius: 0.2em;
-      transition: 0.2s all ease-out;
-      &:hover {
-        background-color: #07334b;
+    .container_buttons {
+      @include size(350px, 50px);
+      @include flexCenter(row, space-around, center);
+
+      .call_to_accion {
+        @include flexCenter(row, center, center);
+        font-size: 16px;
+        font-weight: 300;
+        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: $mainColor;
+        @include size(150px, 45px);
+        border: 1.5px solid $mainColor;
+        margin-top: 40px;
+        margin-right: 1em;
+        cursor: pointer;
+        border-radius: 0.2em;
+        transition: 0.2s all ease-out;
+        &:hover {
+          background-color: #07334b;
+        }
       }
     }
   }
@@ -99,6 +105,9 @@ $padding-left-right: 8vw;
         margin: 0 auto;
         text-align: center;
       }
+      .container_buttons {
+        margin: 0 auto;
+      }
     }
     .container_svg-animation {
       svg {
@@ -123,9 +132,13 @@ $padding-left-right: 8vw;
         margin: 0 auto;
         text-align: center;
       }
-      p,
-      button {
+      p {
         margin-top: 7vh;
+      }
+      .container_buttons {
+        margin: 0 auto;
+        @include flexCenter(column, space-evenly, center);
+        @include size(200px, 170px);
       }
     }
     .container_svg-animation {

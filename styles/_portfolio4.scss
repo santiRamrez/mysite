@@ -6,6 +6,7 @@
   background-color: #07334b;
   max-width: 1900px;
   position: relative;
+  padding: 0 16px;
   @include flexCenter(row, space-around, center);
 
   canvas {
@@ -18,15 +19,16 @@
 
   .form {
     z-index: 2;
-    @include size(50%, 100%);
+    @include size(40%, 100%);
     @include flexCenter(column, center, center);
 
     form {
-      border: 1px solid #f4f4f4;
-      @include size(70%, 70%);
+      //border: 1px solid #f4f4f4;
+      @include size(400px, 70%);
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;
+      border-radius: 10px;
       box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
 
       .form_container {
@@ -100,11 +102,16 @@
           border: 1px solid #fff;
           cursor: pointer;
           border-radius: 7px;
+          transform: scale(1);
           transition: all 0.3s ease-in-out;
 
           &:hover {
             background-color: green;
             width: 200px;
+          }
+
+          &:active {
+            transform: scale(0.95);
           }
         }
       }
@@ -118,7 +125,7 @@
           color: #fff;
           background-color: transparent;
           padding: 5px 5px;
-          padding-top: 40px;
+          padding-top: 50px;
           outline: none;
           border: none;
 
@@ -139,6 +146,75 @@
   }
 
   .me {
-    @extend .form;
+    z-index: 2;
+    @include size(60%, 100%);
+    @include flexCenter(column, center, center);
+
+    .me_container {
+      font-size: 16px;
+      @include size(80%, 70%);
+      @include flexCenter(column, space-around, center);
+      background-color: rgba(7, 51, 75, 0.9);
+      color: white;
+      border-radius: 0.625em;
+      box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
+      padding: 0 5%;
+
+      h3 {
+        font-size: 1.625em;
+      }
+      p {
+        font-size: 1em;
+        line-height: 1.5625em;
+        margin: 0 auto;
+        margin-top: -4.375em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about {
+    @include size(100%, 600px);
+    @include flexCenter(row, space-around, center);
+
+    .form {
+      @include size(50%, 100%);
+
+      form {
+        @include size(80%, 70%);
+      }
+    }
+
+    .me {
+      @include size(50%, 100%);
+
+      .me_container {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    @include size(100%, 1000px);
+    @include flexCenter(column, flex-start, center);
+
+    .form {
+      @include size(100%, 500px);
+
+      form {
+        @include size(95%, 90%);
+      }
+    }
+
+    .me {
+      @include size(100%, 500px);
+
+      .me_container {
+        @include size(95%, 90%);
+      }
+    }
   }
 }

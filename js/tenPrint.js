@@ -19,7 +19,7 @@ function drawLine(startX, startY, endX, endY) {
 
 let x = 0;
 let y = 0;
-let spacing = 40;
+let spacing = 60;
 
 let renderIt = () => {
   let random = Math.random().toFixed(2);
@@ -35,7 +35,25 @@ let renderIt = () => {
   }
 };
 
-let execute = setInterval(renderIt, 100);
+let execute;
+
 if (y > canvas.height) {
   clearInterval(execute);
 }
+
+/*************** Intersection Observer ****************/
+
+//new IntersectionObserver(callback, options);
+
+const section = document.getElementById("aboutMe");
+const options = {};
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      execute = setInterval(renderIt, 100);
+      console.log(entry.target);
+    }
+  });
+}, options);
+
+observer.observe(section);

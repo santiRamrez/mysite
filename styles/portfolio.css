@@ -96,7 +96,41 @@ body {
   font-size: 18px;
 }
 
-.intro__portfolio .container__title button {
+.intro__portfolio .container__title .container_buttons {
+  width: 350px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro__portfolio .container__title .container_buttons .call_to_accion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 16px;
   font-weight: 300;
   background-color: transparent;
@@ -113,7 +147,7 @@ body {
   transition: 0.2s all ease-out;
 }
 
-.intro__portfolio .container__title button:hover {
+.intro__portfolio .container__title .container_buttons .call_to_accion:hover {
   background-color: #07334b;
 }
 
@@ -158,6 +192,9 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+  .intro__portfolio .container__title .container_buttons {
+    margin: 0 auto;
+  }
   .intro__portfolio .container_svg-animation svg {
     display: none;
   }
@@ -176,9 +213,28 @@ body {
     margin: 0 auto;
     text-align: center;
   }
-  .intro__portfolio .container__title p,
-  .intro__portfolio .container__title button {
+  .intro__portfolio .container__title p {
     margin-top: 7vh;
+  }
+  .intro__portfolio .container__title .container_buttons {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 200px;
+    height: 170px;
   }
   .intro__portfolio .container_svg-animation svg {
     display: none;
@@ -270,6 +326,7 @@ body {
 @media (max-width: 940px) {
   .container__projects {
     padding: 30px 0;
+    padding-bottom: 60px;
   }
   .container__projects .timeline {
     margin-left: 10%;
@@ -280,6 +337,7 @@ body {
   .container__projects {
     padding: 16px;
     padding-left: 20px;
+    padding-bottom: 60px;
   }
   .container__projects .timeline {
     margin-left: 0;
@@ -309,6 +367,7 @@ body {
 @media (max-width: 480px) {
   .container__projects {
     padding: 16px 12px;
+    padding-bottom: 60px;
   }
   .container__projects .timeline {
     width: 100%;
@@ -413,6 +472,7 @@ body {
   background-color: #07334b;
   max-width: 1900px;
   position: relative;
+  padding: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,9 +498,9 @@ body {
   height: 100%;
 }
 
-.about .form, .about .me {
+.about .form {
   z-index: 2;
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,9 +519,8 @@ body {
           align-items: center;
 }
 
-.about .form form, .about .me form {
-  border: 1px solid #f4f4f4;
-  width: 70%;
+.about .form form {
+  width: 400px;
   height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,11 +538,12 @@ body {
           align-items: center;
   background-color: rgba(7, 51, 75, 0.9);
   color: white;
+  border-radius: 10px;
   -webkit-box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
           box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
 }
 
-.about .form form .form_container, .about .me form .form_container {
+.about .form form .form_container {
   width: 80%;
   height: auto;
   display: -webkit-box;
@@ -505,7 +565,7 @@ body {
   position: relative;
 }
 
-.about .form form .form_container input, .about .me form .form_container input {
+.about .form form .form_container input {
   width: 100%;
   height: auto;
   font-size: 14px;
@@ -517,9 +577,8 @@ body {
   border: none;
 }
 
-.about .form form .form_container input:focus + label span, .about .me form .form_container input:focus + label span,
-.about .form form .form_container input:valid + label span,
-.about .me form .form_container input:valid + label span {
+.about .form form .form_container input:focus + label span,
+.about .form form .form_container input:valid + label span {
   -webkit-transform: translateY(-130%);
           transform: translateY(-130%);
   font-size: 14px;
@@ -527,14 +586,13 @@ body {
   opacity: 80%;
 }
 
-.about .form form .form_container input:focus + label::after, .about .me form .form_container input:focus + label::after,
-.about .form form .form_container input:valid + label::after,
-.about .me form .form_container input:valid + label::after {
+.about .form form .form_container input:focus + label::after,
+.about .form form .form_container input:valid + label::after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.about .form form .form_container label, .about .me form .form_container label {
+.about .form form .form_container label {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -546,7 +604,7 @@ body {
   pointer-events: none;
 }
 
-.about .form form .form_container label::after, .about .me form .form_container label::after {
+.about .form form .form_container label::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -561,7 +619,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.about .form form .form_container label span, .about .me form .form_container label span {
+.about .form form .form_container label span {
   position: absolute;
   bottom: 5px;
   left: 0;
@@ -571,7 +629,7 @@ body {
   padding-left: 6px;
 }
 
-.about .form form .form_container .submit-button, .about .me form .form_container .submit-button {
+.about .form form .form_container .submit-button {
   padding: 8px 7px;
   width: 150px;
   color: #fff;
@@ -580,16 +638,23 @@ body {
   border: 1px solid #fff;
   cursor: pointer;
   border-radius: 7px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.about .form form .form_container .submit-button:hover, .about .me form .form_container .submit-button:hover {
+.about .form form .form_container .submit-button:hover {
   background-color: green;
   width: 200px;
 }
 
-.about .form form .textarea_container, .about .me form .textarea_container {
+.about .form form .form_container .submit-button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.about .form form .textarea_container {
   width: 80%;
   height: 30%;
   display: -webkit-box;
@@ -609,21 +674,20 @@ body {
           align-items: center;
 }
 
-.about .form form .textarea_container textarea, .about .me form .textarea_container textarea {
+.about .form form .textarea_container textarea {
   width: 100%;
   height: 100%;
   font-size: 14px;
   color: #fff;
   background-color: transparent;
   padding: 5px 5px;
-  padding-top: 40px;
+  padding-top: 50px;
   outline: none;
   border: none;
 }
 
-.about .form form .textarea_container textarea:focus + label span, .about .me form .textarea_container textarea:focus + label span,
-.about .form form .textarea_container textarea:valid + label span,
-.about .me form .textarea_container textarea:valid + label span {
+.about .form form .textarea_container textarea:focus + label span,
+.about .form form .textarea_container textarea:valid + label span {
   -webkit-transform: translateY(-450%);
           transform: translateY(-450%);
   font-size: 14px;
@@ -631,11 +695,142 @@ body {
   opacity: 80%;
 }
 
-.about .form form .textarea_container textarea:focus + label::after, .about .me form .textarea_container textarea:focus + label::after,
-.about .form form .textarea_container textarea:valid + label::after,
-.about .me form .textarea_container textarea:valid + label::after {
+.about .form form .textarea_container textarea:focus + label::after,
+.about .form form .textarea_container textarea:valid + label::after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.about .me {
+  z-index: 2;
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .me .me_container {
+  font-size: 16px;
+  width: 80%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(7, 51, 75, 0.9);
+  color: white;
+  border-radius: 0.625em;
+  -webkit-box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
+          box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
+  padding: 0 5%;
+}
+
+.about .me .me_container h3 {
+  font-size: 1.625em;
+}
+
+.about .me .me_container p {
+  font-size: 1em;
+  line-height: 1.5625em;
+  margin: 0 auto;
+  margin-top: -4.375em;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    width: 100%;
+    height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .form {
+    width: 50%;
+    height: 100%;
+  }
+  .about .form form {
+    width: 80%;
+    height: 70%;
+  }
+  .about .me {
+    width: 50%;
+    height: 100%;
+  }
+  .about .me .me_container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    width: 100%;
+    height: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .form {
+    width: 100%;
+    height: 500px;
+  }
+  .about .form form {
+    width: 95%;
+    height: 90%;
+  }
+  .about .me {
+    width: 100%;
+    height: 500px;
+  }
+  .about .me .me_container {
+    width: 95%;
+    height: 90%;
+  }
 }
 
 footer {
