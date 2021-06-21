@@ -1,11 +1,12 @@
 @import "./variables";
-/****Timeline y CANVAS ***********/
+/*********** Projects section ***********/
 .container__projects {
   @include size(100%, auto);
   max-width: 1900px;
   margin: 0 auto;
   background-color: #07334b;
   padding-top: 30px;
+  padding-bottom: 60px;
 
   .timeline {
     @include size(25px, auto);
@@ -58,14 +59,6 @@
     }
   }
 }
-.canvas {
-  @include size(100%, auto);
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: transparent;
-  overflow: hidden;
-}
-
 @media (max-width: 940px) {
   .container__projects {
     padding: 30px 0;

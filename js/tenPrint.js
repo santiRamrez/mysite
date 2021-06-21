@@ -3,8 +3,8 @@ const canvas = document.getElementById("tenPrintCanvas");
 //Using canvas api we`re going to work on the ctx "context" variable
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth - 20;
+canvas.height = window.innerHeight + 10;
 
 ctx.fillStyle = "#07334B";
 ctx.fillRect(0, 0, canvas.width, canvas.height); //render the canvas on screen
@@ -35,7 +35,7 @@ let renderIt = () => {
   }
 };
 
-/*let execute = setInterval(renderIt, 100);
+let execute = setInterval(renderIt, 100);
 if (y > canvas.height) {
   clearInterval(execute);
-}*/
+}

@@ -48,7 +48,7 @@
       media="screen"
     />
     <link
-      href="styles/portfolio.css?v=0.2"
+      href="styles/portfolio.css?v=0.3"
       rel="stylesheet"
       type="text/css"
       media="screen"
@@ -307,7 +307,7 @@
           caption="Using Vanilla JavaScript! - 2020"
           img="./portfolio/memorygame/memory_game.png"
           bgimg="#212121"
-          leadto="https://wikipedia.org"
+          leadto="https://tecnolatam.cl/portfolio/memorygame/"
         >
           <span slot="p1">
             I made this one watching a video on You-Tube. While doing this I
@@ -344,12 +344,50 @@
     </section>
 
     <section class="about">
+      <canvas id="tenPrintCanvas"></canvas>
+      <div class="form">
+        <form action="">
+          <div class="form_container">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              required
+            />
+            <label id="name_label" for="name">
+              <span>Full Name</span>
+            </label>
+          </div>
+          <div class="form_container">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              autocomplete="off"
+              required
+            />
+            <label id="email_label" for="email">
+              <span>Email</span>
+            </label>
+          </div>
+          <div class="form_container textarea_container">
+            <textarea
+              id="comments"
+              class="form-textarea"
+              name="comments"
+              required
+            ></textarea>
+            <label for="comments"><span>Write your message</span></label>
+          </div>
+          <div class="form_container">
+            <button type="submit" id="submit" class="submit-button">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
       <div class="me"></div>
-      <div class="form"></div>
-    </section>
-
-    <section class="canvas">
-      <canvas id="tenPrintCanvas"> </canvas>
     </section>
 
     <!--Footer-->

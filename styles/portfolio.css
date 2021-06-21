@@ -185,8 +185,8 @@ body {
   }
 }
 
-/*The below file are the styles of the second section*/
-/****Timeline y CANVAS ***********/
+/*The below file are the styles of the project cards section*/
+/*********** Projects section ***********/
 .container__projects {
   width: 100%;
   height: auto;
@@ -194,6 +194,7 @@ body {
   margin: 0 auto;
   background-color: #07334b;
   padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 .container__projects .timeline {
@@ -264,15 +265,6 @@ body {
 .container__projects .timeline .img-container img {
   width: 100%;
   height: 100%;
-}
-
-.canvas {
-  width: 100%;
-  height: auto;
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: transparent;
-  overflow: hidden;
 }
 
 @media (max-width: 940px) {
@@ -376,8 +368,8 @@ body {
 }
 
 #space-ship {
-  -webkit-animation: rocket 30s ease-in;
-          animation: rocket 30s ease-in;
+  -webkit-animation: rocket 20s ease-in;
+          animation: rocket 20s ease-in;
   z-index: 5;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
@@ -411,6 +403,239 @@ body {
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
+}
+
+/*The below file are the form and about me section*/
+.about {
+  margin: 0 auto;
+  width: 100%;
+  height: 600px;
+  background-color: #07334b;
+  max-width: 1900px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about .form, .about .me {
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .form form, .about .me form {
+  border: 1px solid #f4f4f4;
+  width: 70%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(7, 51, 75, 0.9);
+  color: white;
+  -webkit-box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+          box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+}
+
+.about .form form .form_container, .about .me form .form_container {
+  width: 80%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about .form form .form_container input, .about .me form .form_container input {
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  color: #fff;
+  padding: 7px 5px;
+  padding-top: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.about .form form .form_container input:focus + label span, .about .me form .form_container input:focus + label span,
+.about .form form .form_container input:valid + label span,
+.about .me form .form_container input:valid + label span {
+  -webkit-transform: translateY(-130%);
+          transform: translateY(-130%);
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 80%;
+}
+
+.about .form form .form_container input:focus + label::after, .about .me form .form_container input:focus + label::after,
+.about .form form .form_container input:valid + label::after,
+.about .me form .form_container input:valid + label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about .form form .form_container label, .about .me form .form_container label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.about .form form .form_container label::after, .about .me form .form_container label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid greenyellow;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about .form form .form_container label span, .about .me form .form_container label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+  padding-left: 6px;
+}
+
+.about .form form .form_container .submit-button, .about .me form .form_container .submit-button {
+  padding: 8px 7px;
+  width: 150px;
+  color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about .form form .form_container .submit-button:hover, .about .me form .form_container .submit-button:hover {
+  background-color: green;
+  width: 200px;
+}
+
+.about .form form .textarea_container, .about .me form .textarea_container {
+  width: 80%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .form form .textarea_container textarea, .about .me form .textarea_container textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  padding: 5px 5px;
+  padding-top: 40px;
+  outline: none;
+  border: none;
+}
+
+.about .form form .textarea_container textarea:focus + label span, .about .me form .textarea_container textarea:focus + label span,
+.about .form form .textarea_container textarea:valid + label span,
+.about .me form .textarea_container textarea:valid + label span {
+  -webkit-transform: translateY(-450%);
+          transform: translateY(-450%);
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 80%;
+}
+
+.about .form form .textarea_container textarea:focus + label::after, .about .me form .textarea_container textarea:focus + label::after,
+.about .form form .textarea_container textarea:valid + label::after,
+.about .me form .textarea_container textarea:valid + label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 footer {
