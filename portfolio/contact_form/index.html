@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <section class="about" id="aboutMe">
+      <canvas id="tenPrintCanvas"></canvas>
+      <div class="form">
+        <!-- method="POST" action="send_email.php" -->
+        <form method="post" action="send_email.php" id="contactForm">
+          <div class="form_container">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="off"
+              required
+            />
+            <label id="name_label" for="name">
+              <span>Full Name</span>
+            </label>
+          </div>
+          <div class="form_container">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              autocomplete="off"
+              required
+            />
+            <label id="email_label" for="email">
+              <span>Email</span>
+            </label>
+          </div>
+          <div class="form_container textarea_container">
+            <textarea
+              id="message"
+              class="form-textarea"
+              name="comments"
+              required
+            ></textarea>
+            <label for="comments"><span>Write your message</span></label>
+          </div>
+          <div class="form_container">
+            <button type="submit" id="submit" class="submit-button">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="ajaxToPhp.js"></script>
+    <script src="validation_form.js"></script>
+    <!--<script src="tenPrint.js"></script>-->
+  </body>
+</html>
