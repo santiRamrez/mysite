@@ -466,10 +466,12 @@ body {
 
 /*The below file are the form and about me section*/
 .about {
+  font-family: "Montserrat text";
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: 100vh;
   background-color: #07334b;
+  max-height: 900px;
   max-width: 1900px;
   position: relative;
   padding: 0 16px;
@@ -522,6 +524,7 @@ body {
 .about .form form {
   width: 400px;
   height: 70%;
+  max-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,11 +569,12 @@ body {
 }
 
 .about .form form .form_container input {
+  font-family: "Montserrat text";
   width: 100%;
   height: auto;
   font-size: 14px;
   color: #fff;
-  padding: 7px 5px;
+  padding: 12px 5px;
   padding-top: 30px;
   background-color: transparent;
   outline: none;
@@ -626,7 +630,8 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   padding-bottom: 5px;
-  padding-left: 6px;
+  padding-left: 4px;
+  pointer-events: none;
 }
 
 .about .form form .form_container .submit-button {
@@ -662,6 +667,97 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.about .form form .textarea_container textarea {
+  font-family: "Montserrat text";
+  width: 100%;
+  height: 70%;
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  padding: 0 5px 5px 5px;
+  line-height: 25px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.about .form form .textarea_container textarea:focus + label span,
+.about .form form .textarea_container textarea:valid + label span {
+  -webkit-transform: translateY(-430%);
+          transform: translateY(-430%);
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 80%;
+}
+
+.about .form form .textarea_container textarea:focus + label::after,
+.about .form form .textarea_container textarea:valid + label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about .messages {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  top: 1vh;
+  right: 0;
+  left: 0;
+}
+
+.about #elMessage {
+  font-size: 14px;
+  padding-left: 7px;
+}
+
+.about .error-message {
+  position: fixed;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: #630b0b;
+  border-radius: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .error-message .icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -674,31 +770,79 @@ body {
           align-items: center;
 }
 
-.about .form form .textarea_container textarea {
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
+.about .error-message .icon-container .icon {
+  margin-top: -2px;
+  width: 35px;
+  height: 35px;
+}
+
+.about .error-message .icon-container .check-icon {
+  display: none;
+}
+
+.about .error-message .icon-container .error-icon {
+  display: block;
+}
+
+.about .ok-message {
+  position: fixed;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
   color: #fff;
-  background-color: transparent;
-  padding: 5px 5px;
-  padding-top: 50px;
-  outline: none;
-  border: none;
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about .form form .textarea_container textarea:focus + label span,
-.about .form form .textarea_container textarea:valid + label span {
-  -webkit-transform: translateY(-450%);
-          transform: translateY(-450%);
-  font-size: 14px;
-  font-weight: lighter;
-  opacity: 80%;
+.about .ok-message .icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about .form form .textarea_container textarea:focus + label::after,
-.about .form form .textarea_container textarea:valid + label::after {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.about .ok-message .icon-container .icon {
+  margin-top: -2px;
+  width: 35px;
+  height: 35px;
+}
+
+.about .ok-message .icon-container .check-icon {
+  display: block;
+}
+
+.about .ok-message .icon-container .error-icon {
+  display: none;
 }
 
 .about .me {
@@ -726,6 +870,7 @@ body {
   font-size: 16px;
   width: 80%;
   height: 70%;
+  max-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,61 +887,107 @@ body {
           align-items: center;
   background-color: rgba(7, 51, 75, 0.9);
   color: white;
-  border-radius: 0.625em;
-  -webkit-box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
-          box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
-  padding: 0 5%;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+          box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+  padding: 16px;
 }
 
 .about .me .me_container h3 {
-  font-size: 1.625em;
+  font-size: 1.5em;
 }
 
 .about .me .me_container p {
-  font-size: 1em;
+  padding: 0 1em;
   line-height: 1.5625em;
-  margin: 0 auto;
   margin-top: -4.375em;
 }
 
 @media (max-width: 1000px) {
   .about {
     width: 100%;
-    height: 600px;
+    height: 300vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
   }
   .about .form {
-    width: 50%;
-    height: 100%;
+    width: 70%;
+    height: 50%;
   }
   .about .form form {
-    width: 80%;
-    height: 70%;
+    width: 70%;
+    height: 90%;
   }
   .about .me {
-    width: 50%;
-    height: 100%;
+    width: 70%;
+    height: 50%;
   }
   .about .me .me_container {
     font-size: 14px;
+    width: 70%;
+    height: 90%;
+  }
+  .about .me .me_container p {
+    margin-top: 0;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 866px) {
   .about {
+    width: 100%;
+    height: 300vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+  }
+  .about .form {
+    width: 100%;
+    height: 50%;
+  }
+  .about .form form {
+    width: 400px;
+    height: 90%;
+  }
+  .about .me {
+    width: 100%;
+    height: 50%;
+  }
+  .about .me .me_container {
+    font-size: 14px;
+    width: 90%;
+    height: 90%;
+  }
+  .about .me .me_container p {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 454px) {
+  .about {
+    padding-top: 20px;
     width: 100%;
     height: 1000px;
     display: -webkit-box;
@@ -808,28 +999,38 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
   }
   .about .form {
     width: 100%;
-    height: 500px;
+    height: 50%;
   }
   .about .form form {
-    width: 95%;
+    width: 290px;
     height: 90%;
+  }
+  .about .form form .textarea_container textarea {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .about .messages {
+    top: 0;
   }
   .about .me {
     width: 100%;
-    height: 500px;
+    height: 50%;
   }
   .about .me .me_container {
-    width: 95%;
+    font-size: 12px;
+    width: 290px;
     height: 90%;
+  }
+  .about .me .me_container p {
+    margin-top: 0;
   }
 }
 

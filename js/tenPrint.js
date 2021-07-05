@@ -51,7 +51,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       execute = setInterval(renderIt, 100);
-      console.log(entry.target);
+      //console.log(entry.target);
     }
   });
 }, options);

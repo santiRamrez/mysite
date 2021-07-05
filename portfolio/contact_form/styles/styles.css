@@ -1,0 +1,461 @@
+@font-face {
+  src: url(./Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: block;
+}
+
+@font-face {
+  src: url(./Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+  font-display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.about {
+  font-family: "Montserrat text";
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background-color: #07334b;
+  max-height: 900px;
+  max-width: 1900px;
+  position: relative;
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about .form {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .form form {
+  width: 400px;
+  height: 70%;
+  max-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(7, 51, 75, 0.9);
+  color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+          box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+}
+
+.about .form form .form_container {
+  width: 80%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.about .form form .form_container input {
+  font-family: "Montserrat text";
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  color: #fff;
+  padding: 12px 5px;
+  padding-top: 30px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.about .form form .form_container input:focus + label span,
+.about .form form .form_container input:valid + label span {
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 80%;
+}
+
+.about .form form .form_container input:focus + label::after,
+.about .form form .form_container input:valid + label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about .form form .form_container label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.about .form form .form_container label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid greenyellow;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.about .form form .form_container label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  pointer-events: none;
+}
+
+.about .form form .form_container .submit-button {
+  padding: 8px 7px;
+  width: 150px;
+  color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about .form form .form_container .submit-button:hover {
+  background-color: green;
+  width: 200px;
+}
+
+.about .form form .form_container .submit-button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.about .form form .textarea_container {
+  width: 80%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.about .form form .textarea_container textarea {
+  font-family: "Montserrat text";
+  width: 100%;
+  height: 70%;
+  font-size: 14px;
+  color: #fff;
+  background-color: transparent;
+  padding: 0 5px 5px 5px;
+  line-height: 25px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.about .form form .textarea_container textarea:focus + label span,
+.about .form form .textarea_container textarea:valid + label span {
+  -webkit-transform: translateY(-430%);
+          transform: translateY(-430%);
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 80%;
+}
+
+.about .form form .textarea_container textarea:focus + label::after,
+.about .form form .textarea_container textarea:valid + label::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.about .messages {
+  display: none;
+}
+
+.about #elMessage {
+  font-size: 14px;
+  padding-left: 7px;
+}
+
+.about .error-message {
+  position: absolute;
+  z-index: 5;
+  top: 5vh;
+  right: 0;
+  left: 0;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: #630b0b;
+  border-radius: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .error-message .icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .error-message .icon-container .icon {
+  margin-top: -2px;
+  width: 35px;
+  height: 35px;
+}
+
+.about .error-message .icon-container .check-icon {
+  display: none;
+}
+
+.about .error-message .icon-container .error-icon {
+  display: block;
+}
+
+.about .ok-message {
+  position: absolute;
+  z-index: 5;
+  top: 5vh;
+  right: 0;
+  left: 0;
+  font-size: 16px;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: green;
+  border-radius: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .ok-message .icon-container {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .ok-message .icon-container .icon {
+  margin-top: -2px;
+  width: 35px;
+  height: 35px;
+}
+
+.about .ok-message .icon-container .check-icon {
+  display: block;
+}
+
+.about .ok-message .icon-container .error-icon {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .form {
+    width: 50%;
+    height: 100%;
+  }
+  .about .form form {
+    width: 80%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .form {
+    width: 100%;
+    height: 500px;
+  }
+  .about .form form {
+    width: 95%;
+    height: 90%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

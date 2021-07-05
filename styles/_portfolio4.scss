@@ -1,9 +1,11 @@
 @import "./variables";
 
 .about {
+  font-family: "Montserrat text";
   margin: 0 auto;
-  @include size(100%, 600px);
+  @include size(100%, 100vh);
   background-color: #07334b;
+  max-height: 900px;
   max-width: 1900px;
   position: relative;
   padding: 0 16px;
@@ -25,6 +27,7 @@
     form {
       //border: 1px solid #f4f4f4;
       @include size(400px, 70%);
+      max-height: 600px;
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;
@@ -38,10 +41,11 @@
         position: relative;
 
         input {
+          font-family: "Montserrat text";
           @include size(100%, auto);
           font-size: 14px;
           color: #fff;
-          padding: 7px 5px;
+          padding: 12px 5px;
           padding-top: 30px;
           background-color: transparent;
           outline: none;
@@ -89,7 +93,8 @@
             left: 0;
             transition: all 0.3s ease;
             padding-bottom: 5px;
-            padding-left: 6px;
+            padding-left: 4px;
+            pointer-events: none;
           }
         }
 
@@ -117,21 +122,23 @@
       }
       .textarea_container {
         @include size(80%, 30%);
-        @include flexCenter(row, center, center);
+        @include flexCenter(column, flex-end, flex-end);
 
         textarea {
-          @include size(100%, 100%);
+          font-family: "Montserrat text";
+          @include size(100%, 70%);
           font-size: 14px;
           color: #fff;
           background-color: transparent;
-          padding: 5px 5px;
-          padding-top: 50px;
+          padding: 0 5px 5px 5px;
+          line-height: 25px;
           outline: none;
           border: none;
+          resize: none;
 
           &:focus + label span,
           &:valid + label span {
-            transform: translateY(-450%);
+            transform: translateY(-430%);
             font-size: 14px;
             font-weight: lighter;
             opacity: 80%;
@@ -144,7 +151,78 @@
       }
     }
   }
+  .messages {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 1vh;
+    right: 0;
+    left: 0;
+  }
+  #elMessage {
+    font-size: 14px;
+    padding-left: 7px;
+  }
+  .error-message {
+    position: fixed;
+    font-size: 16px;
+    @include size(300px, 50px);
+    color: #fff;
+    //background-color: #64ff38; //sent
+    background-color: #630b0b; //error
+    border-radius: 5px;
+    padding: 5px;
+    @include flexCenter(row, space-evenly, center);
 
+    .icon-container {
+      @include size(30px, 30px);
+      background-color: #fff;
+      border-radius: 2000px;
+      @include flexCenter(row, center, center);
+
+      .icon {
+        margin-top: -2px;
+        @include size(35px, 35px);
+      }
+
+      .check-icon {
+        display: none;
+      }
+      .error-icon {
+        display: block;
+      }
+    }
+  }
+
+  .ok-message {
+    position: fixed;
+    font-size: 16px;
+    @include size(300px, 50px);
+    color: #fff;
+    background-color: green; //sent
+    border-radius: 5px;
+    padding: 5px;
+    @include flexCenter(row, space-around, center);
+
+    .icon-container {
+      @include size(30px, 30px);
+      background-color: #fff;
+      border-radius: 2000px;
+      @include flexCenter(row, center, center);
+
+      .icon {
+        margin-top: -2px;
+        @include size(35px, 35px);
+      }
+
+      .check-icon {
+        display: block;
+      }
+      .error-icon {
+        display: none;
+      }
+    }
+  }
   .me {
     z-index: 2;
     @include size(60%, 100%);
@@ -153,20 +231,21 @@
     .me_container {
       font-size: 16px;
       @include size(80%, 70%);
+      max-height: 600px;
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;
-      border-radius: 0.625em;
-      box-shadow: 0.125em 0.125em 0.625em 0.1875em rgba(255, 255, 255, 0.815);
-      padding: 0 5%;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+      padding: 16px;
 
       h3 {
-        font-size: 1.625em;
+        font-size: 1.5em;
       }
+
       p {
-        font-size: 1em;
+        padding: 0 1em;
         line-height: 1.5625em;
-        margin: 0 auto;
         margin-top: -4.375em;
       }
     }
@@ -175,45 +254,91 @@
 
 @media (max-width: 1000px) {
   .about {
-    @include size(100%, 600px);
-    @include flexCenter(row, space-around, center);
+    @include size(100%, 300vh);
+    @include flexCenter(column, space-around, space-around);
 
     .form {
-      @include size(50%, 100%);
+      @include size(70%, 50%);
 
       form {
-        @include size(80%, 70%);
+        @include size(70%, 90%);
       }
     }
-
     .me {
-      @include size(50%, 100%);
+      @include size(70%, 50%);
 
       .me_container {
         font-size: 14px;
+        @include size(70%, 90%);
+
+        p {
+          margin-top: 0;
+        }
       }
     }
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 866px) {
   .about {
-    @include size(100%, 1000px);
-    @include flexCenter(column, flex-start, center);
+    @include size(100%, 300vh);
+    @include flexCenter(column, space-around, space-around);
 
     .form {
-      @include size(100%, 500px);
+      @include size(100%, 50%);
 
       form {
-        @include size(95%, 90%);
+        @include size(400px, 90%);
       }
     }
-
     .me {
-      @include size(100%, 500px);
+      @include size(100%, 50%);
 
       .me_container {
-        @include size(95%, 90%);
+        font-size: 14px;
+        @include size(90%, 90%);
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 454px) {
+  .about {
+    padding-top: 20px;
+    @include size(100%, 1000px);
+    @include flexCenter(column, space-around, space-around);
+
+    .form {
+      @include size(100%, 50%);
+
+      form {
+        @include size(290px, 90%);
+
+        .textarea_container {
+          textarea {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+    .messages {
+      top: 0;
+    }
+    .me {
+      @include size(100%, 50%);
+
+      .me_container {
+        font-size: 12px;
+        @include size(290px, 90%);
+
+        p {
+          margin-top: 0;
+        }
       }
     }
   }

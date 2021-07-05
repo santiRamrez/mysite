@@ -48,18 +48,22 @@
       media="screen"
     />
     <link
-      href="styles/portfolio.css?v=0.3"
+      href="styles/portfolio.css?v=0.4"
       rel="stylesheet"
       type="text/css"
       media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="./portfolio/contact_form/node_modules/animate.css/animate.css"
     />
     <!--Icon-->
     <link
       rel="icon"
       type="image/png"
-      href="images/apple-touch-icon-120x120.png"
+      href="./images/apple-touch-icon-120x120.png"
     />
-    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" />
     <title>Santiago Ramírez - Portfolio</title>
   </head>
 
@@ -290,12 +294,11 @@
         >
           <span slot="p1">
             I spent one week working on this project using HTML, CSS and a
-            little bit of JavaScript. And I thought that I could make it better
-            developing a contact form, so I watched a bunch of videos on
-            You-Tube and was able to create one from zero using PHP.
+            little bit of JavaScript. I could improve it developing a contact
+            form that actually works, from zero using PHP.
           </span>
           <span slot="p2">
-            I'm also proud of that logo made by myself using FIGMA!
+            I'm also proud of the logo's website made by myself using FIGMA!
           </span>
 
           <span slot="p3">
@@ -312,9 +315,9 @@
           leadto="https://tecnolatam.cl/portfolio/memorygame/"
         >
           <span slot="p1">
-            I made this one watching a video on You-Tube. While doing this I
-            learnt the basics of functional programming, for example when I
-            should use a boolean like true or false.
+            I made this one watching a video on YouTube. I learnt several things
+            like when I have to use a boolean to flow control and it also gave
+            me a better understanding of DOM manipulation.
           </span>
           <a
             target="_blank"
@@ -324,16 +327,33 @@
           >
           <span slot="p3">
             Several months later I added some levels and a timer. Additionally I
-            improved the UI and UX.
+            improved a little the UI.
           </span>
         </project-card>
 
         <project-card
-          thename="Perfect Score at Google Lighthouse"
-          caption="My first nice project! - 2020"
-          img="./images/perfect_score_mejiasasociados.png"
+          thename="Contact Form with Validations"
+          caption="Regex, PHP and JavaScript - 2021"
+          img="./images/contact_form.png"
           bgimg="#212121"
-        ></project-card>
+          leadto="https://tecnolatam.cl/portfolio/contact_form/"
+        >
+          <span slot="p1">
+            In this project I applied AJAX using plain JavaScript to send the
+            data to a couple of PHP files on my server. I learnt how to use JSON
+            and how to submit a form correctly.
+          </span>
+          <span slot="p2">
+            I used that data to send an email to me and an email to the user as
+            a confirmation of its message was received successfully. So please
+            do use a real email testing it.
+          </span>
+          <span slot="p3">
+            I also applied a 10 print design at the background using CANVAS api.
+            And of course, those validations with regex (JS) and a css framework
+            called animate.css.
+          </span>
+        </project-card>
 
         <!-- End of the timeline -->
         <div class="img-container">
@@ -348,58 +368,58 @@
     <section class="about" id="aboutMe">
       <canvas id="tenPrintCanvas"></canvas>
       <div class="form">
-        <form action="">
+        <!-- method="POST" action="send_email.php" -->
+        <form id="contactForm" onsubmit="validateData()">
           <div class="form_container">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              autocomplete="off"
-              required
-            />
+            <input type="text" id="name" autocomplete="off" required />
             <label id="name_label" for="name">
               <span>Full Name</span>
             </label>
           </div>
           <div class="form_container">
-            <input
-              type="text"
-              name="email"
-              id="email"
-              autocomplete="off"
-              required
-            />
+            <input type="text" id="email" autocomplete="off" required />
             <label id="email_label" for="email">
               <span>Email</span>
             </label>
           </div>
           <div class="form_container textarea_container">
-            <textarea
-              id="comments"
-              class="form-textarea"
-              name="comments"
-              required
-            ></textarea>
+            <textarea id="message" class="form-textarea" required></textarea>
             <label for="comments"><span>Write your message</span></label>
           </div>
           <div class="form_container">
-            <button type="submit" id="submit" class="submit-button">
-              Send Message
-            </button>
+            <button id="btnSendForm" class="submit-button">Send Message</button>
           </div>
         </form>
+      </div>
+      <!-- Show messages to the user -->
+      <div class="messages animate__animated animate__bounceInLeft">
+        <div class="icon-container">
+          <img
+            src="./images/icons/check-circle-solid.svg"
+            alt="message sent"
+            class="check-icon icon"
+          />
+          <img
+            src="./images/icons/times-circle-solid.svg"
+            alt="message sent"
+            class="error-icon icon"
+          />
+        </div>
+        <p id="elMessage">Message sent successfully!</p>
       </div>
       <div class="me">
         <div class="me_container">
           <h3>Let's work together!</h3>
           <p>
             I've been getting into computer science and web development since
-            2020. I started watching several tutorials on You-Tube, taking
-            courses and reading some books.
+            2020. I started watching several tutorials on YouTube, taking
+            courses and reading books. It has been a heavy path but I do not
+            regret anything. I want to go to University in the future and
+            actually get a Bachelor in CS
           </p>
           <p>
-            I might help you coding your next web applications using
-            <strong>JavaScript (React.js and Node.js)</strong>
+            I might help you coding your next web applications using JavaScript
+            (React.js and Node.js) or PHP.
           </p>
           <p>
             My wish is make such a good piece of app that can grow easily and
@@ -442,5 +462,7 @@
     <script src="js/year.js"></script>
     <script src="js/tenPrint.js"></script>
     <script src="js/putNumberTimeline.js"></script>
+    <script src="js/validation_form.js"></script>
+    <script src="js/ajaxToPhp.js"></script>
   </body>
 </html>

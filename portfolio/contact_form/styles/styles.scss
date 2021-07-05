@@ -1,0 +1,276 @@
+@import "./variables";
+
+@font-face {
+  src: url(./Montserrat-SemiBold.ttf);
+  font-family: "Montserrat";
+  font-display: block;
+}
+
+@font-face {
+  src: url(./Montserrat-Regular.ttf);
+  font-family: "Montserrat text";
+  font-display: block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.about {
+  font-family: "Montserrat text";
+  margin: 0 auto;
+  @include size(100%, 100vh);
+  background-color: #07334b;
+  max-height: 900px;
+  max-width: 1900px;
+  position: relative;
+  padding: 0 16px;
+  @include flexCenter(row, space-around, center);
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include size(100%, 100%);
+  }
+
+  .form {
+    z-index: 2;
+    @include size(100%, 100%);
+    @include flexCenter(column, center, center);
+
+    form {
+      //border: 1px solid #f4f4f4;
+      @include size(400px, 70%);
+      max-height: 600px;
+      @include flexCenter(column, space-around, center);
+      background-color: rgba(7, 51, 75, 0.9);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px 3px rgba(255, 255, 255, 0.815);
+
+      .form_container {
+        @include size(80%, auto);
+        @include flexCenter(column, space-between, center);
+        overflow: hidden;
+        position: relative;
+
+        input {
+          font-family: "Montserrat text";
+          @include size(100%, auto);
+          font-size: 14px;
+          color: #fff;
+          padding: 12px 5px;
+          padding-top: 30px;
+          background-color: transparent;
+          outline: none;
+          border: none;
+
+          &:focus + label span,
+          &:valid + label span {
+            transform: translateY(-110%);
+            font-size: 14px;
+            font-weight: lighter;
+            opacity: 80%;
+          }
+
+          &:focus + label::after,
+          &:valid + label::after {
+            transform: translateX(0);
+          }
+        }
+
+        label {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          color: #fff;
+          border-bottom: 1px solid #fff;
+          @include size(100%, 100%);
+          pointer-events: none;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            @include size(100%, 100%);
+            border-bottom: 3px solid greenyellow;
+            transform: translateX(-100%);
+            transition: all 0.3s ease;
+          }
+
+          span {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            transition: all 0.3s ease;
+            padding-bottom: 5px;
+            padding-left: 4px;
+            pointer-events: none;
+          }
+        }
+
+        .submit-button {
+          padding: 8px 7px;
+          width: 150px;
+          color: #fff;
+          font-size: 16px;
+          background-color: transparent;
+          border: 1px solid #fff;
+          cursor: pointer;
+          border-radius: 7px;
+          transform: scale(1);
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: green;
+            width: 200px;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+      .textarea_container {
+        @include size(80%, 30%);
+        @include flexCenter(column, flex-end, flex-end);
+
+        textarea {
+          font-family: "Montserrat text";
+          @include size(100%, 70%);
+          font-size: 14px;
+          color: #fff;
+          background-color: transparent;
+          padding: 0 5px 5px 5px;
+          line-height: 25px;
+          outline: none;
+          border: none;
+          resize: none;
+
+          &:focus + label span,
+          &:valid + label span {
+            transform: translateY(-430%);
+            font-size: 14px;
+            font-weight: lighter;
+            opacity: 80%;
+          }
+          &:focus + label::after,
+          &:valid + label::after {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+  .messages {
+    display: none;
+  }
+  #elMessage {
+    font-size: 14px;
+    padding-left: 7px;
+  }
+  .error-message {
+    position: absolute;
+    z-index: 5;
+    top: 5vh;
+    right: 0;
+    left: 0;
+    font-size: 16px;
+    @include size(300px, 50px);
+    color: #fff;
+    //background-color: #64ff38; //sent
+    background-color: #630b0b; //error
+    border-radius: 5px;
+    padding: 5px;
+    @include flexCenter(row, space-evenly, center);
+
+    .icon-container {
+      @include size(30px, 30px);
+      background-color: #fff;
+      border-radius: 2000px;
+      @include flexCenter(row, center, center);
+
+      .icon {
+        margin-top: -2px;
+        @include size(35px, 35px);
+      }
+
+      .check-icon {
+        display: none;
+      }
+      .error-icon {
+        display: block;
+      }
+    }
+  }
+
+  .ok-message {
+    position: absolute;
+    z-index: 5;
+    top: 5vh;
+    right: 0;
+    left: 0;
+    font-size: 16px;
+    @include size(300px, 50px);
+    color: #fff;
+    background-color: green; //sent
+    border-radius: 5px;
+    padding: 5px;
+    @include flexCenter(row, space-around, center);
+
+    .icon-container {
+      @include size(30px, 30px);
+      background-color: #fff;
+      border-radius: 2000px;
+      @include flexCenter(row, center, center);
+
+      .icon {
+        margin-top: -2px;
+        @include size(35px, 35px);
+      }
+
+      .check-icon {
+        display: block;
+      }
+      .error-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about {
+    @include size(100%, 100vh);
+    @include flexCenter(row, space-around, center);
+
+    .form {
+      @include size(50%, 100%);
+
+      form {
+        @include size(80%, 70%);
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .about {
+    @include size(100%, 100vh);
+    @include flexCenter(column, center, center);
+
+    .form {
+      @include size(100%, 500px);
+
+      form {
+        @include size(95%, 90%);
+      }
+    }
+  }
+}
