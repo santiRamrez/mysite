@@ -1,0 +1,69 @@
+@import "./variables";
+
+.pop_ups-container {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  @include size(100vw, 100vh);
+  @include flexCenter(row, center, center);
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(0) translate(-50%, -50%);
+  transition: transform 0.8s ease-in-out;
+
+  .pop-up {
+    @include size(400px, 300px);
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 0;
+      display: block;
+      @include size(30px, 30px);
+      cursor: pointer;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 30px;
+      width: 80%;
+      font-size: 18px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      border-bottom: 1px solid #212121;
+    }
+
+    a {
+      @include size(60%, 30px);
+      margin-left: 40px;
+      margin-top: 20px;
+      cursor: pointer;
+      @include flexCenter(row, space-around, center);
+
+      .icon-pdf {
+        display: inline-block;
+        cursor: pointer;
+        @include size(20px, 30px);
+      }
+    }
+  }
+}
+
+@media (max-width: 478px) {
+  .pop_ups-container {
+    .pop-up {
+      @include size(90%, 400px);
+
+      a {
+        margin-left: 14px;
+        @include size(85%, 30px);
+      }
+    }
+  }
+}

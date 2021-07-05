@@ -73,8 +73,8 @@
         <h1>I'm Santiago Ramirez Web Developer</h1>
         <p>...since 2020 as a self taught!</p>
         <div class="container_buttons">
-          <a class="call_to_accion">Download CV</a>
-          <a href="#aboutMe" class="call_to_accion">About Me</a>
+          <button id="downloadCV" class="call_to_accion">Download CV</button>
+          <button href="#aboutMe" class="call_to_accion">About Me</button>
         </div>
       </div>
       <div class="container_svg-animation">
@@ -429,6 +429,41 @@
       </div>
     </section>
 
+    <!--Pop Ups Download CV-->
+    <div class="pop_ups-container">
+      <div class="pop-up">
+        <span id="closePopUpDownloadCV" class="close">
+          <img
+            src="./images/icons/times-circle-solid.svg"
+            alt="close pop up icon"
+          />
+        </span>
+        <h3>Please choose a Language</h3>
+        <ul>
+          <!-- First Link -->
+          <a
+            href="./pdf/Desarrollador_Web-Santiago_Ramírez.pdf"
+            download="CV_Santiago_Ramirez_Web_Dev"
+          >
+            <div class="icon-pdf">
+              <img src="./images/icons/file-pdf-regular.svg" alt="pdf file" />
+            </div>
+            Download CV in Spanish</a
+          >
+          <!-- Second Link -->
+          <a
+            href="./pdf/EN-Web_Dev-Santiago_Ramirez.pdf"
+            download="Resume_Santiago_Ramirez_Web_Dev"
+          >
+            <div class="icon-pdf">
+              <img src="./images/icons/file-pdf-regular.svg" alt="pdf file" />
+            </div>
+            Download CV in English</a
+          >
+        </ul>
+      </div>
+    </div>
+
     <!--Footer-->
     <footer>
       <div class="info__footer">
@@ -464,5 +499,6 @@
     <script src="js/putNumberTimeline.js"></script>
     <script src="js/validation_form.js"></script>
     <script src="js/ajaxToPhp.js"></script>
+    <script src="./js/pop_ups.js"></script>
   </body>
 </html>
