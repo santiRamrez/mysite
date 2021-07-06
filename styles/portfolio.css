@@ -60,7 +60,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   max-width: 1900px;
-  max-height: 750px;
+  max-height: 850px;
   background-image: url(../images/world.jpg);
   background-image: url(../images/world.webp);
   background-repeat: no-repeat;
@@ -113,6 +113,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.intro__portfolio .container__title .container_buttons button {
+  word-spacing: 1.5px;
+  letter-spacing: 0.8px;
 }
 
 .intro__portfolio .container__title .container_buttons .call_to_accion {
@@ -524,7 +529,7 @@ body {
 .about .form form {
   width: 400px;
   height: 70%;
-  max-height: 600px;
+  max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,8 +700,8 @@ body {
 
 .about .form form .textarea_container textarea:focus + label span,
 .about .form form .textarea_container textarea:valid + label span {
-  -webkit-transform: translateY(-430%);
-          transform: translateY(-430%);
+  -webkit-transform: translateY(-440%);
+          transform: translateY(-440%);
   font-size: 14px;
   font-weight: lighter;
   opacity: 80%;
@@ -870,7 +875,7 @@ body {
   font-size: 16px;
   width: 80%;
   height: 70%;
-  max-height: 600px;
+  max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

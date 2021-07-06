@@ -5,7 +5,7 @@ $padding-left-right: 8vw;
   @include size(100%, 100vh);
   margin: 0 auto;
   max-width: 1900px;
-  max-height: 750px;
+  max-height: 850px;
   background-image: url(../images/world.jpg);
   background-image: url(../images/world.webp);
   background-repeat: no-repeat;
@@ -39,6 +39,10 @@ $padding-left-right: 8vw;
       @include size(350px, 50px);
       @include flexCenter(row, space-around, center);
 
+      button {
+        word-spacing: 1.5px;
+        letter-spacing: 0.8px;
+      }
       .call_to_accion {
         @include flexCenter(row, center, center);
         font-size: 16px;

@@ -44,7 +44,7 @@
     form {
       //border: 1px solid #f4f4f4;
       @include size(400px, 70%);
-      max-height: 600px;
+      max-height: 450px;
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;

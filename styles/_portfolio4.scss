@@ -27,7 +27,7 @@
     form {
       //border: 1px solid #f4f4f4;
       @include size(400px, 70%);
-      max-height: 600px;
+      max-height: 450px;
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;
@@ -138,7 +138,7 @@
 
           &:focus + label span,
           &:valid + label span {
-            transform: translateY(-430%);
+            transform: translateY(-440%);
             font-size: 14px;
             font-weight: lighter;
             opacity: 80%;
@@ -231,7 +231,7 @@
     .me_container {
       font-size: 16px;
       @include size(80%, 70%);
-      max-height: 600px;
+      max-height: 450px;
       @include flexCenter(column, space-around, center);
       background-color: rgba(7, 51, 75, 0.9);
       color: white;

@@ -76,7 +76,7 @@
 .about .form form {
   width: 400px;
   height: 70%;
-  max-height: 600px;
+  max-height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

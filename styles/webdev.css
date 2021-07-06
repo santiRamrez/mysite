@@ -49,9 +49,10 @@ body {
 /*Just Heading and introduction to webdev.html*/
 .heading {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   margin: 0 auto;
   max-width: 1900px;
+  max-height: 850px;
   background-image: url(../images/world.jpg);
   background-image: url(../images/world.webp);
   background-repeat: no-repeat;

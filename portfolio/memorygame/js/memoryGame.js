@@ -60,12 +60,13 @@ function isMatch() {
 
   /** Check for next level **/
   let nextLevel = matches == 8;
-  let victory = nextLevel && level == 4;
   if (nextLevel && level < 4) {
     console.log("next level buddy");
+    console.log(level);
     setTimeout(showNextLevelMsg, 1000);
   }
-  if (victory) {
+  //Victory
+  if (nextLevel && level == 5) {
     setTimeout(youHaveWon, 2000);
   }
 }
