@@ -5,7 +5,7 @@ $padding-left-right: 8vw;
   @include size(100%, 100vh);
   margin: 0 auto;
   max-width: 1900px;
-  max-height: 850px;
+  max-height: 900px;
   background-image: url(../images/world.jpg);
   background-image: url(../images/world.webp);
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@ $padding-left-right: 8vw;
   .container_svg-animation {
     @include size(100%, 100%);
     max-width: 1900px;
-    max-height: 750px;
+    max-height: 900px;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
